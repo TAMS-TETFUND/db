@@ -5,9 +5,9 @@ from django.db.utils import IntegrityError
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 
-from manage import django_setup
+# from manage import django_setup
 
-django_setup()
+# django_setup()
 
 from .models import (
     Faculty,
