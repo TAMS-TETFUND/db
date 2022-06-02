@@ -1,0 +1,13 @@
+[
+    {
+        "model": "db.staff",
+        "pk": 1,
+        "fields":{
+            "staff_number": "SS.1234",
+            "username": "SS.1234",
+            "first_name": "Lorem",
+            "last_name": "Ipsum",
+            "department_id": 1
+        }
+    }
+]
