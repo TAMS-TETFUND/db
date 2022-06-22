@@ -2,6 +2,7 @@ import json
 import os
 from pathlib import Path
 import re
+import secrets
 
 import numpy as np
 from django.db.models import Value, Q, F
@@ -324,6 +325,7 @@ class AcademicSession(models.Model):
 
 class AttendanceSession(models.Model):
     id = models.BigAutoField(primary_key=True)
+    # node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
         to=AppUser, on_delete=models.CASCADE, null=True, blank=True
     )
@@ -338,6 +340,7 @@ class AttendanceSession(models.Model):
         default=AttendanceSessionStatus.ACTIVE,
     )
     recurring = models.BooleanField(default=False)
+
 
     class Meta:
         constraints = [
@@ -397,3 +400,31 @@ class CourseRegistration(models.Model):
     def save(self, *args, **kwargs):
         self.clean()
         return super(CourseRegistration, self).save(*args, **kwargs)
+
+
+class NodeDevice(models.Model):
+    """A model that keeps record of every legitimate node device
+        to avoid processing data from unauthorized/unknown devices.
+    """
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255)
+    token = models.CharField(max_length=64)
+
+    def save(self, *args, **kwargs):
+        if self.id is None:
+            self.id = self.next_valid_id()
+        if self.name in (None, ''):
+            self.name = self.next_device_name(self.next_valid_id())
+        if self.token in (None, ''):
+            self.token = secrets.token_urlsafe(32)
+        super(NodeDevice, self).save(*args, **kwargs)
+    
+    @staticmethod
+    def next_valid_id():
+        next_id = NodeDevice.objects.filter(id__gt=0).order_by('id').last()
+        next_id = 1 if next_id is None else (next_id.pk + 1)
+        return next_id
+
+    @staticmethod
+    def next_device_name(next_valid_id):
+        return f"TAMS {next_valid_id}"
