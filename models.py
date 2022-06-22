@@ -149,10 +149,8 @@ class Department(models.Model):
 class AppUser(AbstractUser):
     id = models.BigAutoField(primary_key=True)
     other_names = models.CharField(max_length=255, null=True, blank=True)
-    fingerprint_template = models.CharField(
-        max_length=3000, null=True, blank=True
-    )
-    face_encodings = models.CharField(max_length=3000, null=True, blank=True)
+    fingerprint_template = models.TextField(null=True, blank=True)
+    face_encodings = models.TextField(null=True, blank=True)
     # is_active = models.BooleanField(default=True)
 
 
@@ -194,10 +192,8 @@ class Student(models.Model):
         choices=AdmissionStatus.choices, default=AdmissionStatus.REGULAR
     )
     level_of_study = models.IntegerField(null=True, blank=True)
-    fingerprint_template = models.CharField(
-        max_length=512, null=True, blank=True
-    )
-    face_encodings = models.CharField(max_length=3000, null=True, blank=True)
+    fingerprint_template = models.TextField(null=True, blank=True)
+    face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=Sex.choices)
     # is_active = models.BooleanField(default=True)
 
