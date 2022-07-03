@@ -152,6 +152,7 @@ class AppUser(AbstractUser):
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
+    sex = models.IntegerField(choices=Sex.choices)
     # is_active = models.BooleanField(default=True)
 
 
