@@ -27,29 +27,40 @@ from pathlib import Path
 import json
 
 
-SERVER_DUMP = ("StaffTitle", "Faculty", "Department", "AppUser", "Staff", "Student", "Course", "AcademicSession", "CourseRegistration")
+SERVER_DUMP = (
+    "StaffTitle",
+    "Faculty",
+    "Department",
+    "AppUser",
+    "Staff",
+    "Student",
+    "Course",
+    "AcademicSession",
+    "CourseRegistration",
+)
 NODE_DUMP = ("AttendanceSession", "AttendanceRecord")
 
 CURRENT_DIR = Path(os.path.abspath(__file__)).parent
 DUMP_DIR = os.path.join(CURRENT_DIR.parent, "dumps")
 os.makedirs(DUMP_DIR, exist_ok=True)
 
+
 def dump_data(from_server: bool = True):
     model_list = SERVER_DUMP if from_server else NODE_DUMP
-    
+
     command_str = "python manage.py dumpdata "
     for model in model_list:
         command_str += "db.%s " % model
 
     cmd_run = subprocess.run(command_str, shell=True, capture_output=True)
 
-    return cmd_run.stdout.decode('utf-8')
+    return cmd_run.stdout.decode("utf-8")
 
 
 def save_dump(data: str, from_server: bool = True):
     dump_file_name = "server_dump.json" if from_server else "node_dump.json"
     dump_file = os.path.join(DUMP_DIR, dump_file_name)
-    
+
     with open(dump_file, "w") as dump_file:
         json.dump(json.loads(data), dump_file)
     return True
@@ -60,7 +71,9 @@ def get_dump(from_server: bool = True):
     dump_file = os.path.join(DUMP_DIR, dump_file_name)
 
     if not os.path.exists(dump_file):
-        raise FileNotFoundError("%s dump file not found" % dump_file_name.split("_")[0])
+        raise FileNotFoundError(
+            "%s dump file not found" % dump_file_name.split("_")[0]
+        )
 
     with open(dump_file, "r") as dump_file:
         data = json.load(dump_file)
@@ -68,14 +81,15 @@ def get_dump(from_server: bool = True):
     return data
 
 
-
 def load_data(to_server: bool = True):
     dump_file_name = "node_dump.json" if to_server else "server_dump.json"
     dump_file = os.path.join(DUMP_DIR, dump_file_name)
 
     if not os.path.exists(dump_file):
-        raise FileNotFoundError("%s dump file not found" % dump_file_name.split("_")[0])
-    
+        raise FileNotFoundError(
+            "%s dump file not found" % dump_file_name.split("_")[0]
+        )
+
     command_str = "python manage.py loaddata %s" % dump_file
 
     try:
@@ -85,6 +99,7 @@ def load_data(to_server: bool = True):
         raise
 
     return cmd_run
+
 
 """
 Issue of verification of node device before synching begins.
