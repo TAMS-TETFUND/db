@@ -19,7 +19,6 @@ Data transferred from server to node device includes:
 Data transferred from node device to server
     = AttendanceSession
     = AtendanceRecord
-
 """
 import os
 import subprocess
