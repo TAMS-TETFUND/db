@@ -92,8 +92,9 @@ class StaffTitle(models.Model):
         constraints = [
             models.UniqueConstraint(
                 Upper(Replace("title", Value("."), Value(""))),
-                name="unique_title",
-            )
+                name="conflicting_title_abbreviation",
+            ),
+            models.UniqueConstraint(Upper("title_full"), name="unique_title")
         ]
 
     def __str__(self):
