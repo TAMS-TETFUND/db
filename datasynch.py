@@ -25,6 +25,7 @@ import subprocess
 from pathlib import Path
 import json
 
+import pandas as pd
 
 SERVER_DUMP = (
     "StaffTitle",
@@ -42,6 +43,19 @@ NODE_DUMP = ("AttendanceSession", "AttendanceRecord")
 CURRENT_DIR = Path(os.path.abspath(__file__)).parent
 DUMP_DIR = os.path.join(CURRENT_DIR.parent, "dumps")
 os.makedirs(DUMP_DIR, exist_ok=True)
+
+
+def csv_to_json(csv_file):
+    try:
+        df = pd.read_csv(csv_file, skipinitialspace=True)
+    except Exception as e:
+        print(e)
+
+    json_file_path = csv_file.split(".csv")[0] + ".json"
+    content = [el for idx, el in df.iterrows()]
+    with open(json_file_path) as json_file:
+        json_file.write(json.dumps(content, indent=4))
+    return
 
 
 def dump_data(from_server: bool = True):
