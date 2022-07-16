@@ -1,0 +1,128 @@
+[
+    {
+        "model": "db.admissionstatus",
+        "pk": 1,
+        "fields": {
+            "status": "Regular"
+        }
+    },
+    {
+        "model": "db.admissionstatus",
+        "pk": 2,
+        "fields": {
+            "status": "Graduated"
+        }
+    },
+    {
+        "model": "db.admissionstatus",
+        "pk": 3,
+        "fields": {
+            "status": "External"
+        }
+    },
+    {
+        "model": "db.admissionstatus",
+        "pk": 4,
+        "fields": {
+            "status": "Overstay"
+        }
+    },
+    {
+        "model": "db.admissionstatus",
+        "pk": 5,
+        "fields": {
+            "status": "Withdrawn"
+        }
+    },
+    {
+        "model": "db.admissionstatus",
+        "pk": 6,
+        "fields": {
+            "status": "Suspended"
+        }
+    },
+    {
+        "model": "db.semester",
+        "pk": 1,
+        "fields": {
+            "semester": "First"
+        }
+    },
+    {
+        "model": "db.semester",
+        "pk": 2,
+        "fields": {
+            "semester": "Second"
+        }
+    },
+    {
+        "model": "db.sex",
+        "pk": 1,
+        "fields": {
+            "sex": "Male"
+        }
+    },
+    {
+        "model": "db.sex",
+        "pk": 2,
+        "fields": {
+            "sex": "Female"
+        }
+    },
+    {
+        "model": "db.eventtype",
+        "pk": 1,
+        "fields": {
+            "type": "Lecture"
+        }
+    },
+    {
+        "model": "db.eventtype",
+        "pk": 2,
+        "fields": {
+            "type": "Lab"
+        }
+    },
+    {
+        "model": "db.eventtype",
+        "pk": 3,
+        "fields": {
+            "type": "Quiz"
+        }
+    },
+    {
+        "model": "db.eventtype",
+        "pk": 4,
+        "fields": {
+            "type": "Examination"
+        }
+    },
+    {
+        "model": "db.attendancesessionstatus",
+        "pk": 1,
+        "fields": {
+            "status": "Active"
+        }
+    },
+    {
+        "model": "db.attendancesessionstatus",
+        "pk": 2,
+        "fields": {
+            "status": "Ended"
+        }
+    },
+    {
+        "model": "db.recordtypes",
+        "pk": 1,
+        "fields": {
+            "type": "Sign In"
+        }
+    },
+    {
+        "model": "db.recordtypes",
+        "pk": 2,
+        "fields": {
+            "type": "Sign Out"
+        }
+    }
+]

@@ -15,22 +15,22 @@ from .models import (
     Department,
     Staff,
     Student,
-    Semester,
+    SemesterChoices,
     Course,
     AcademicSession,
     AttendanceRecord,
     AttendanceSession,
     CourseRegistration,
-    Sex,
-    EventType,
-    RecordTypes,
+    SexChoices,
+    EventTypeChoices,
+    RecordTypesChoices,
 )
 
 
 class SemesterTestCase(TestCase):
     def test_semester_vals(self):
-        self.assertEqual(Semester.FIRST, 1)
-        self.assertEqual(Semester.SECOND, 2)
+        self.assertEqual(SemesterChoices.FIRST, 1)
+        self.assertEqual(SemesterChoices.SECOND, 2)
 
 
 class FacultyTestCase(TestCase):
@@ -201,7 +201,7 @@ class CourseTestCase(TestCase):
             level_of_study=2,
             department=new_dept,
             unit_load=3,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
         )
         course_details = {
             "code": "ECE 272",
@@ -209,7 +209,7 @@ class CourseTestCase(TestCase):
             "level_of_study": 2,
             "department": new_dept,
             "unit_load": 3,
-            "semester": Semester.SECOND,
+            "semester": SemesterChoices.SECOND,
         }
         self.assertRaises(
             IntegrityError, Course.objects.create, **course_details
@@ -217,7 +217,7 @@ class CourseTestCase(TestCase):
 
     def test_semester_field_validation_constraint(self):
         """Attempting to create a course with semester set to value not defined
-        in Semester class
+        in SemesterChoices class
         """
         new_faculty = Faculty.objects.create(name="Engineering")
         new_dept = Department.objects.create(
@@ -293,14 +293,14 @@ class AttendanceSessionTestCase(TestCase):
             level_of_study=2,
             department=dept_obj,
             unit_load=3,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
         )
         start_time = timezone.now()
         att_session = AttendanceSession.objects.create(
             initiator=staff_obj,
             course=course_obj,
             session=acad_session,
-            event_type=EventType.LECTURE,
+            event_type=EventTypeChoices.LECTURE,
             start_time=start_time,
             duration=timedelta(hours=2),
         )
@@ -308,7 +308,7 @@ class AttendanceSessionTestCase(TestCase):
             "initiator": staff_obj,
             "course": course_obj,
             "session": acad_session,
-            "event_type": EventType.LECTURE,
+            "event_type": EventTypeChoices.LECTURE,
             "start_time": start_time,
             "duration": timedelta(hours=2),
         }
@@ -341,7 +341,7 @@ class AttendanceSessionTestCase(TestCase):
             level_of_study=2,
             department=dept_obj,
             unit_load=3,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
         )
         start_time = timezone.now()
         # attempting to set stop time to be earlier than start time
@@ -349,7 +349,7 @@ class AttendanceSessionTestCase(TestCase):
             "initiator": staff_obj,
             "course": course_obj,
             "session": acad_session,
-            "event_type": EventType.LECTURE,
+            "event_type": EventTypeChoices.LECTURE,
             "start_time": start_time,
             "duration": timedelta(microseconds=0),
         }
@@ -385,7 +385,7 @@ class AttendanceRecordTestCase(TestCase):
             level_of_study=2,
             department=dept_obj,
             unit_load=3,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
         )
         student_obj = Student.objects.create(
             reg_number="2001/123456",
@@ -394,13 +394,13 @@ class AttendanceRecordTestCase(TestCase):
             possible_grad_yr=2022,
             level_of_study=2,
             department=dept_obj,
-            sex=Sex.MALE,
+            sex=SexChoices.MALE,
         )
         att_session = AttendanceSession.objects.create(
             initiator=staff_obj,
             course=course_obj,
             session=acad_session,
-            event_type=EventType.LECTURE,
+            event_type=EventTypeChoices.LECTURE,
             start_time=timezone.now(),
             duration=timedelta(hours=1),
         )
@@ -408,13 +408,13 @@ class AttendanceRecordTestCase(TestCase):
         AttendanceRecord.objects.create(
             attendance_session=att_session,
             student=student_obj,
-            record_type=RecordTypes.SIGN_IN,
+            record_type=RecordTypesChoices.SIGN_IN,
         )
 
         record_details = {
             "attendance_session": att_session,
             "student": student_obj,
-            "record_type": RecordTypes.SIGN_IN,
+            "record_type": RecordTypesChoices.SIGN_IN,
         }
         self.assertRaises(
             IntegrityError, AttendanceRecord.objects.create, **record_details
@@ -436,7 +436,7 @@ class CourseRegistrationTestCase(TestCase):
             level_of_study=2,
             department=dept_obj,
             unit_load=3,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
         )
         student_obj = Student.objects.create(
             reg_number="2001/123456",
@@ -445,19 +445,19 @@ class CourseRegistrationTestCase(TestCase):
             possible_grad_yr=2022,
             level_of_study=2,
             department=dept_obj,
-            sex=Sex.MALE,
+            sex=SexChoices.MALE,
         )
 
         CourseRegistration.objects.create(
             session=acad_session,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
             course=course_obj,
             student=student_obj,
         )
 
         reg_details = {
             "session": acad_session,
-            "semester": Semester.SECOND,
+            "semester": SemesterChoices.SECOND,
             "course": course_obj,
             "student": student_obj,
         }
@@ -479,7 +479,7 @@ class CourseRegistrationTestCase(TestCase):
             level_of_study=2,
             department=dept_obj,
             unit_load=3,
-            semester=Semester.SECOND,
+            semester=SemesterChoices.SECOND,
         )
         student_obj = Student.objects.create(
             reg_number="2001/123456",
@@ -488,12 +488,12 @@ class CourseRegistrationTestCase(TestCase):
             possible_grad_yr=2022,
             level_of_study=2,
             department=dept_obj,
-            sex=Sex.MALE,
+            sex=SexChoices.MALE,
         )
 
         reg_details = {
             "session": acad_session,
-            "semester": Semester.FIRST,
+            "semester": SemesterChoices.FIRST,
             "course": course_obj,
             "student": student_obj,
         }

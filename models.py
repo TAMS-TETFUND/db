@@ -46,7 +46,7 @@ class AppIntegerChoices(models.IntegerChoices):
         return eval(f"{cls.__name__}.{string.upper()}.value")
 
 
-class AdmissionStatus(AppIntegerChoices):
+class AdmissionStatusChoices(AppIntegerChoices):
     REGULAR = 1, "Regular"
     GRADUATE = 2, "Graduated"
     EXTERNAL = 3, "External"
@@ -55,31 +55,61 @@ class AdmissionStatus(AppIntegerChoices):
     SUSPENDED = 6, "Suspended"
 
 
-class Semester(AppIntegerChoices):
+class SemesterChoices(AppIntegerChoices):
     FIRST = 1, "First"
     SECOND = 2, "Second"
 
 
-class Sex(AppIntegerChoices):
+class SexChoices(AppIntegerChoices):
     MALE = 1, "Male"
     FEMALE = 2, "Female"
 
 
-class EventType(AppIntegerChoices):
+class EventTypeChoices(AppIntegerChoices):
     LECTURE = 1, "Lecture"
     LAB = 2, "Lab"
     QUIZ = 3, "Quiz"
     EXAMINATION = 4, "Examination"
 
 
-class AttendanceSessionStatus(AppIntegerChoices):
+class AttendanceSessionStatusChoices(AppIntegerChoices):
     ACTIVE = 1, "Active"
     ENDED = 2, "Ended"
 
 
-class RecordTypes(AppIntegerChoices):
+class RecordTypesChoices(AppIntegerChoices):
     SIGN_IN = 1, "Sign In"
     SIGN_OUT = 2, "Sign Out"
+
+
+class AdmissionStatus(models.Model):
+    id = models.SmallAutoField(primary_key=True)
+    status = models.CharField(max_length=255)
+
+
+class Semester(models.Model):
+    id = models.SmallAutoField(primary_key=True)
+    semester = models.CharField(max_length=20)
+
+
+class Sex(models.Model):
+    id = models.SmallAutoField(primary_key=True)
+    sex = models.CharField(max_length=20)
+
+
+class EventType(models.Model):
+    id = models.SmallAutoField(primary_key=True)
+    type = models.CharField(max_length=100)
+
+
+class AttendanceSessionStatus(models.Model):
+    id = models.SmallAutoField(primary_key=True)
+    status = models.CharField(max_length=50)
+
+
+class RecordTypes(models.Model):
+    id = models.SmallAutoField(primary_key=True)
+    type = models.CharField(max_length=50)
 
 
 class StaffTitle(models.Model):
@@ -153,7 +183,7 @@ class AppUser(AbstractUser):
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
-    sex = models.IntegerField(choices=Sex.choices)
+    sex = models.IntegerField(choices=SexChoices.choices)
     # is_active = models.BooleanField(default=True)
 
 
@@ -192,12 +222,12 @@ class Student(models.Model):
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     possible_grad_yr = models.IntegerField()
     admission_status = models.IntegerField(
-        choices=AdmissionStatus.choices, default=AdmissionStatus.REGULAR
+        choices=AdmissionStatusChoices.choices, default=AdmissionStatusChoices.REGULAR
     )
     level_of_study = models.IntegerField(null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
-    sex = models.IntegerField(choices=Sex.choices)
+    sex = models.IntegerField(choices=SexChoices.choices)
     # is_active = models.BooleanField(default=True)
 
     def __str__(self):
@@ -226,7 +256,7 @@ class Course(models.Model):
     level_of_study = models.IntegerField()
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     unit_load = models.IntegerField()
-    semester = models.IntegerField(choices=Semester.choices)
+    semester = models.IntegerField(choices=SemesterChoices.choices)
     elective = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
@@ -237,7 +267,7 @@ class Course(models.Model):
                 name="unique_course_details",
             ),
             models.CheckConstraint(
-                check=Q(semester__in=Semester.values),
+                check=Q(semester__in=SemesterChoices.values),
                 name="check_valid_semester",
             ),
         ]
@@ -252,9 +282,9 @@ class Course(models.Model):
         level_of_study=None,
     ):
         course_list = cls.objects.all().exclude(is_active=False)
-        if semester and semester in Semester.labels:
+        if semester and semester in SemesterChoices.labels:
             course_list = course_list.filter(
-                semester=Semester.values[Semester.labels.index(semester)]
+                semester=SemesterChoices.values[SemesterChoices.labels.index(semester)]
             )
 
         if (
@@ -333,13 +363,13 @@ class AttendanceSession(models.Model):
     )
     course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
     session = models.ForeignKey(to=AcademicSession, on_delete=models.CASCADE)
-    event_type = models.IntegerField(choices=EventType.choices)
+    event_type = models.IntegerField(choices=EventTypeChoices.choices)
     start_time = models.DateTimeField(default=timezone.now())
     duration = models.DurationField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(
-        choices=AttendanceSessionStatus.choices,
-        default=AttendanceSessionStatus.ACTIVE,
+        choices=AttendanceSessionStatusChoices.choices,
+        default=AttendanceSessionStatusChoices.ACTIVE,
     )
     recurring = models.BooleanField(default=False)
 
@@ -363,7 +393,7 @@ class AttendanceRecord(models.Model):
     )
     student = models.ForeignKey(to=Student, on_delete=models.CASCADE)
     record_type = models.IntegerField(
-        choices=RecordTypes.choices, default=RecordTypes.SIGN_IN
+        choices=RecordTypesChoices.choices, default=RecordTypesChoices.SIGN_IN
     )
     logged_by = models.DateTimeField(auto_now_add=True)
     is_valid = models.BooleanField(default=True)
@@ -380,7 +410,7 @@ class AttendanceRecord(models.Model):
 class CourseRegistration(models.Model):
     id = models.BigAutoField(primary_key=True)
     session = models.ForeignKey(to=AcademicSession, on_delete=models.CASCADE)
-    semester = models.IntegerField(choices=Semester.choices)
+    semester = models.IntegerField(choices=SemesterChoices.choices)
     course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
     student = models.ForeignKey(to=Student, on_delete=models.CASCADE)
 
