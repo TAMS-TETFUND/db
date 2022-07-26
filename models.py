@@ -94,7 +94,7 @@ class StaffTitle(models.Model):
                 Upper(Replace("title", Value("."), Value(""))),
                 name="conflicting_title_abbreviation",
             ),
-            models.UniqueConstraint(Upper("title_full"), name="unique_title")
+            models.UniqueConstraint(Upper("title_full"), name="unique_title"),
         ]
 
     def __str__(self):
@@ -192,7 +192,8 @@ class Student(models.Model):
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     possible_grad_yr = models.IntegerField()
     admission_status = models.IntegerField(
-        choices=AdmissionStatusChoices.choices, default=AdmissionStatusChoices.REGULAR
+        choices=AdmissionStatusChoices.choices,
+        default=AdmissionStatusChoices.REGULAR,
     )
     level_of_study = models.IntegerField(null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
@@ -254,7 +255,9 @@ class Course(models.Model):
         course_list = cls.objects.all().exclude(is_active=False)
         if semester and semester in SemesterChoices.labels:
             course_list = course_list.filter(
-                semester=SemesterChoices.values[SemesterChoices.labels.index(semester)]
+                semester=SemesterChoices.values[
+                    SemesterChoices.labels.index(semester)
+                ]
             )
 
         if (
@@ -354,7 +357,7 @@ class AttendanceSession(models.Model):
                 name="check_valid_stop_time",
             ),
         ]
-    
+
 
 class AttendanceRecord(models.Model):
     id = models.BigAutoField(primary_key=True)
