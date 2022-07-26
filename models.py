@@ -423,8 +423,8 @@ class NodeDevice(models.Model):
     """
 
     id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    token = models.CharField(max_length=64)
+    name = models.CharField(max_length=255, blank=True)
+    token = models.CharField(max_length=64, blank=True)
 
     def save(self, *args, **kwargs):
         if self.id is None:
