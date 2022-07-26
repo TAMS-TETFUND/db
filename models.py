@@ -82,36 +82,6 @@ class RecordTypesChoices(AppIntegerChoices):
     SIGN_OUT = 2, "Sign Out"
 
 
-class AdmissionStatus(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    status = models.CharField(max_length=255)
-
-
-class Semester(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    semester = models.CharField(max_length=20)
-
-
-class Sex(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    sex = models.CharField(max_length=20)
-
-
-class EventType(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    type = models.CharField(max_length=100)
-
-
-class AttendanceSessionStatus(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    status = models.CharField(max_length=50)
-
-
-class RecordTypes(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    type = models.CharField(max_length=50)
-
-
 class StaffTitle(models.Model):
     id = models.BigAutoField(primary_key=True)
     title_full = models.CharField(max_length=50)
@@ -384,7 +354,7 @@ class AttendanceSession(models.Model):
                 name="check_valid_stop_time",
             ),
         ]
-
+    
 
 class AttendanceRecord(models.Model):
     id = models.BigAutoField(primary_key=True)
@@ -395,7 +365,8 @@ class AttendanceRecord(models.Model):
     record_type = models.IntegerField(
         choices=RecordTypesChoices.choices, default=RecordTypesChoices.SIGN_IN
     )
-    logged_by = models.DateTimeField(auto_now_add=True)
+    check_in_by = models.DateTimeField(auto_now_add=True)
+    check_out_by = models.DateTimeField(blank=True, null=True)
     is_valid = models.BooleanField(default=True)
 
     class Meta:
@@ -405,6 +376,16 @@ class AttendanceRecord(models.Model):
                 name="unique_attendance_record",
             ),
         ]
+
+    def clean(self):
+        if self.record_type != RecordTypesChoices.SIGN_IN:
+            saved_record = AttendanceRecord.objects.get(pk=self.pk)
+            if self.record_type != saved_record.record_type:
+                self.check_out_by = timezone.now()
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        return super().save(*args, **kwargs)
 
 
 class CourseRegistration(models.Model):
