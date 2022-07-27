@@ -188,9 +188,8 @@
     },
     {
         "model": "db.student",
-        "pk": 1,
+        "pk": "2020/123456",
         "fields": {
-            "reg_number": "2020/123456",
             "first_name": "John",
             "last_name": "Doe",
             "department_id": 1,
@@ -207,7 +206,7 @@
             "session_id": 1,
             "semester": 1,
             "course_id": 1,
-            "student_id": 1 
+            "student_id": "2020/123456" 
         }
     }
 ]
