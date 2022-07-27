@@ -149,7 +149,7 @@ class Department(models.Model):
 
 
 class AppUser(AbstractUser):
-    id = models.BigAutoField(primary_key=True)
+    id = models.BigAutoField()
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
@@ -158,7 +158,7 @@ class AppUser(AbstractUser):
 
 
 class Staff(AppUser):
-    staff_number = models.CharField(max_length=25, unique=True)
+    staff_number = models.CharField(primary_key=True, max_length=25, unique=True)
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     is_exam_officer = models.BooleanField(default=False)
     staff_titles = models.ManyToManyField(StaffTitle)
@@ -184,8 +184,8 @@ class AppAdmin(AppUser):
 
 
 class Student(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    reg_number = models.CharField(max_length=12, unique=True)
+    id = models.BigAutoField()
+    reg_number = models.TextField(primary_key=True, unique=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     other_names = models.CharField(max_length=255, null=True, blank=True)
@@ -199,7 +199,7 @@ class Student(models.Model):
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=SexChoices.choices)
-    # is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} ({self.reg_number}),\
@@ -424,7 +424,7 @@ class NodeDevice(models.Model):
 
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255, blank=True)
-    token = models.CharField(max_length=64, blank=True)
+    token = models.TextField(blank=True)
 
     def save(self, *args, **kwargs):
         if self.id is None:
