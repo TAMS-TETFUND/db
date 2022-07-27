@@ -149,12 +149,11 @@ class Department(models.Model):
 
 
 class AppUser(AbstractUser):
-    id = models.BigAutoField()
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=SexChoices.choices)
-    # is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
 
 class Staff(AppUser):
@@ -184,7 +183,6 @@ class AppAdmin(AppUser):
 
 
 class Student(models.Model):
-    id = models.BigAutoField()
     reg_number = models.TextField(primary_key=True, unique=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
