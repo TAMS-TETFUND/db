@@ -330,7 +330,7 @@ class AttendanceSession(models.Model):
     id = models.BigAutoField(primary_key=True)
     # node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
-        to=AppUser, on_delete=models.CASCADE, null=True, blank=True
+        to=Staff, on_delete=models.CASCADE, null=True, blank=True
     )
     course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
     session = models.ForeignKey(to=AcademicSession, on_delete=models.CASCADE)
