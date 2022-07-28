@@ -362,7 +362,7 @@ class AttendanceRecord(models.Model):
     attendance_session = models.ForeignKey(
         to=AttendanceSession, on_delete=models.CASCADE
     )
-    student = models.ForeignKey(to=Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(to=Student, on_delete=models.CASCADE, to_field='reg_number')
     record_type = models.IntegerField(
         choices=RecordTypesChoices.choices, default=RecordTypesChoices.SIGN_IN
     )
