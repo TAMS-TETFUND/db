@@ -358,7 +358,7 @@ class AcademicSession(models.Model):
 
 
 class AttendanceSession(models.Model):
-    id = models.CharField(primary_key=True, null=False, max_length=50, default='')
+    id = models.CharField(primary_key=True, null=False, max_length=50)
     node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
         to=Staff, on_delete=models.CASCADE, null=True, blank=True
