@@ -247,12 +247,12 @@ class Course(models.Model):
 
     @classmethod
     def get_courses(
-        cls,
-        *,
-        semester=None,
-        faculty=None,
-        department=None,
-        level_of_study=None,
+            cls,
+            *,
+            semester=None,
+            faculty=None,
+            department=None,
+            level_of_study=None,
     ):
         course_list = cls.objects.all().exclude(is_active=False)
         if semester and semester in SemesterChoices.labels:
@@ -263,8 +263,8 @@ class Course(models.Model):
             )
 
         if (
-            department
-            and Department.objects.filter(name__iexact=department).exists()
+                department
+                and Department.objects.filter(name__iexact=department).exists()
         ):
             course_list = course_list.filter(
                 department__name__iexact=department
@@ -380,9 +380,9 @@ class AttendanceSession(models.Model):
     def save(self, *args, **kwargs):
         if not self.id:
             self.id = (
-                str(self.node_device_id)
-                + str(self.created_on)
-                + str(self.duration)
+                    str(self.node_device_id)
+                    + str(self.created_on)
+                    + str(self.duration)
             )
             self.id = hashlib.md5(self.id.encode()).hexdigest()
 
@@ -423,16 +423,6 @@ class AttendanceRecord(models.Model):
                 name="unique_attendance_record",
             ),
         ]
-
-    def clean(self):
-        if self.record_type != RecordTypesChoices.SIGN_IN:
-            saved_record = AttendanceRecord.objects.get(pk=self.pk)
-            if self.record_type != saved_record.record_type:
-                self.check_out_by = timezone.now()
-
-    def save(self, *args, **kwargs):
-        self.clean()
-        return super().save(*args, **kwargs)
 
 
 class CourseRegistration(models.Model):
