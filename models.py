@@ -122,7 +122,7 @@ class Faculty(models.Model):
 
 class Department(models.Model):
     id = models.BigAutoField(primary_key=True)
-    name = models.CharField(max_length=500)
+    name = models.CharField(max_length=500, unique=True)
     alias = models.CharField(max_length=20, null=True, blank=True)
     faculty = models.ForeignKey(to=Faculty, on_delete=models.CASCADE)
 
@@ -360,7 +360,7 @@ class AcademicSession(models.Model):
 
 
 class AttendanceSession(models.Model):
-    id = models.CharField(primary_key=True, null=False, max_length=50)
+    id = models.CharField(primary_key=True, null=False, max_length=50, unique=True)
     node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
         to=Staff, on_delete=models.CASCADE, null=True, blank=True
@@ -375,6 +375,7 @@ class AttendanceSession(models.Model):
         choices=AttendanceSessionStatusChoices.choices,
         default=AttendanceSessionStatusChoices.ACTIVE,
     )
+    sync_status = models.BooleanField(default=False)
     recurring = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
