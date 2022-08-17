@@ -1,0 +1,3258 @@
+[
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 4,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 4,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 4,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 4,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 5,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 5,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 5,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 5,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 6,
+        "codename": "add_appuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 6,
+        "codename": "change_appuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 6,
+        "codename": "delete_appuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 6,
+        "codename": "view_appuser"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add academic session",
+        "content_type": 7,
+        "codename": "add_academicsession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change academic session",
+        "content_type": 7,
+        "codename": "change_academicsession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete academic session",
+        "content_type": 7,
+        "codename": "delete_academicsession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view academic session",
+        "content_type": 7,
+        "codename": "view_academicsession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add attendance record",
+        "content_type": 8,
+        "codename": "add_attendancerecord"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change attendance record",
+        "content_type": 8,
+        "codename": "change_attendancerecord"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete attendance record",
+        "content_type": 8,
+        "codename": "delete_attendancerecord"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view attendance record",
+        "content_type": 8,
+        "codename": "view_attendancerecord"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add attendance session",
+        "content_type": 9,
+        "codename": "add_attendancesession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change attendance session",
+        "content_type": 9,
+        "codename": "change_attendancesession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete attendance session",
+        "content_type": 9,
+        "codename": "delete_attendancesession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view attendance session",
+        "content_type": 9,
+        "codename": "view_attendancesession"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add course",
+        "content_type": 10,
+        "codename": "add_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change course",
+        "content_type": 10,
+        "codename": "change_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete course",
+        "content_type": 10,
+        "codename": "delete_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view course",
+        "content_type": 10,
+        "codename": "view_course"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add course registration",
+        "content_type": 11,
+        "codename": "add_courseregistration"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change course registration",
+        "content_type": 11,
+        "codename": "change_courseregistration"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete course registration",
+        "content_type": 11,
+        "codename": "delete_courseregistration"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view course registration",
+        "content_type": 11,
+        "codename": "view_courseregistration"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add department",
+        "content_type": 12,
+        "codename": "add_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change department",
+        "content_type": 12,
+        "codename": "change_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete department",
+        "content_type": 12,
+        "codename": "delete_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view department",
+        "content_type": 12,
+        "codename": "view_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add faculty",
+        "content_type": 13,
+        "codename": "add_faculty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change faculty",
+        "content_type": 13,
+        "codename": "change_faculty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete faculty",
+        "content_type": 13,
+        "codename": "delete_faculty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view faculty",
+        "content_type": 13,
+        "codename": "view_faculty"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add node device",
+        "content_type": 14,
+        "codename": "add_nodedevice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change node device",
+        "content_type": 14,
+        "codename": "change_nodedevice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete node device",
+        "content_type": 14,
+        "codename": "delete_nodedevice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view node device",
+        "content_type": 14,
+        "codename": "view_nodedevice"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add staff title",
+        "content_type": 15,
+        "codename": "add_stafftitle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change staff title",
+        "content_type": 15,
+        "codename": "change_stafftitle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete staff title",
+        "content_type": 15,
+        "codename": "delete_stafftitle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view staff title",
+        "content_type": 15,
+        "codename": "view_stafftitle"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 16,
+        "codename": "add_appadmin"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 16,
+        "codename": "change_appadmin"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 16,
+        "codename": "delete_appadmin"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 16,
+        "codename": "view_appadmin"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 17,
+        "codename": "add_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 17,
+        "codename": "change_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 17,
+        "codename": "delete_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 17,
+        "codename": "view_staff"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add student",
+        "content_type": 18,
+        "codename": "add_student"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change student",
+        "content_type": 18,
+        "codename": "change_student"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete student",
+        "content_type": 18,
+        "codename": "delete_student"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view student",
+        "content_type": 18,
+        "codename": "view_student"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add Token",
+        "content_type": 19,
+        "codename": "add_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change Token",
+        "content_type": 19,
+        "codename": "change_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete Token",
+        "content_type": 19,
+        "codename": "delete_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view Token",
+        "content_type": 19,
+        "codename": "view_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add token",
+        "content_type": 20,
+        "codename": "add_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change token",
+        "content_type": 20,
+        "codename": "change_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete token",
+        "content_type": 20,
+        "codename": "delete_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view token",
+        "content_type": 20,
+        "codename": "view_tokenproxy"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "db",
+        "model": "appuser"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "db",
+        "model": "academicsession"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "db",
+        "model": "attendancerecord"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "db",
+        "model": "attendancesession"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "db",
+        "model": "course"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "db",
+        "model": "courseregistration"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "db",
+        "model": "department"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "db",
+        "model": "faculty"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "db",
+        "model": "nodedevice"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "db",
+        "model": "stafftitle"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "db",
+        "model": "appadmin"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "db",
+        "model": "staff"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "db",
+        "model": "student"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "authtoken",
+        "model": "token"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "authtoken",
+        "model": "tokenproxy"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "3qyrbnl11z7b6omg9m1y5uf2i922t5b4",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pABQnFcuvcMZGAGqRqalHbVeHdt0oVu_3vvbyrSutS4dpnjyOqijDr9bonyU9oO-EHtPuk8tWUek94VfdCubxPL63q4fweVev3WGDxaIEzWCIJPmYXO3mVrHQiQMwSI7IIJMLiMFBgHCMC2FMOcinp_AMfMN5U:1oNgMt:P_U5Bdzy7D_b-s32msIwsIyy4xXJJFam5xm37TOhyKg",
+        "expire_date": "2022-08-29T20:07:23.777Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "ci87f8ev1ntp5kdygr8sdy2u1e5es0ui",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2pABQnFcuvcMZGAGqRqalHbVeHdt0oVu_3vvbyrSutS4dpnjyOqijDr9bonyU9oO-EHtPuk8tWUek94VfdCubxPL63q4fweVev3WGDxaIEzWCIJPmYXO3mVrHQiQMwSI7IIJMLiMFBgHCMC2FMOcinp_AMfMN5U:1oJYNX:7xF1L4j5nOP84s0CHShuMwlNBsMm9g1GfL12zgdPkWE",
+        "expire_date": "2022-08-18T10:46:59.899Z"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 1,
+    "fields": {
+        "title_full": "Professor",
+        "title": "Prof"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 2,
+    "fields": {
+        "title_full": "Doctor",
+        "title": "Dr"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 3,
+    "fields": {
+        "title_full": "Engineer",
+        "title": "Engr"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 4,
+    "fields": {
+        "title_full": "Mister",
+        "title": "Mr"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 5,
+    "fields": {
+        "title_full": "Missus",
+        "title": "Mrs"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 6,
+    "fields": {
+        "title_full": "Miss",
+        "title": "Ms"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 7,
+    "fields": {
+        "title_full": "Reverend Father",
+        "title": "Rev Fr"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 8,
+    "fields": {
+        "title_full": "Alhaja",
+        "title": "Alhaja"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 9,
+    "fields": {
+        "title_full": "Barrister",
+        "title": "Barr"
+    }
+},
+{
+    "model": "db.stafftitle",
+    "pk": 10,
+    "fields": {
+        "title_full": "Pastor",
+        "title": "Pstr"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 1,
+    "fields": {
+        "name": "Engineering"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 2,
+    "fields": {
+        "name": "Arts"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 3,
+    "fields": {
+        "name": "Social Sciences"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 4,
+    "fields": {
+        "name": "Physical Sciences"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 5,
+    "fields": {
+        "name": "Biological Sciences"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 6,
+    "fields": {
+        "name": "Agriculture"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 7,
+    "fields": {
+        "name": "Law"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 10,
+    "fields": {
+        "name": "Basic Medical Sciences"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 12,
+    "fields": {
+        "name": "Business Administration"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 13,
+    "fields": {
+        "name": "Dentistry"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 14,
+    "fields": {
+        "name": "Education"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 16,
+    "fields": {
+        "name": "Environmental Studies"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 17,
+    "fields": {
+        "name": "Health Science & Technology"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 19,
+    "fields": {
+        "name": "Medicine"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 20,
+    "fields": {
+        "name": "Pharmaceutical Sciences"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 23,
+    "fields": {
+        "name": "Veterinary Medicine"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 24,
+    "fields": {
+        "name": "Vocational & Technical Education"
+    }
+},
+{
+    "model": "db.faculty",
+    "pk": 59,
+    "fields": {
+        "name": "School of General Studies"
+    }
+},
+{
+    "model": "db.department",
+    "pk": 1,
+    "fields": {
+        "name": "Electronic Engineering",
+        "alias": "ECE",
+        "faculty": 1
+    }
+},
+{
+    "model": "db.department",
+    "pk": 2,
+    "fields": {
+        "name": "Computer Science",
+        "alias": "COS",
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 3,
+    "fields": {
+        "name": "Agricultural Economics",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 4,
+    "fields": {
+        "name": "Agricultural Extension",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 5,
+    "fields": {
+        "name": "Animal Science",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 6,
+    "fields": {
+        "name": "Crop Science",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 7,
+    "fields": {
+        "name": "Food Science and Technology",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 8,
+    "fields": {
+        "name": "Soil science",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 9,
+    "fields": {
+        "name": "Nutrition and Dietetics",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 10,
+    "fields": {
+        "name": "Home Science and Management",
+        "alias": null,
+        "faculty": 6
+    }
+},
+{
+    "model": "db.department",
+    "pk": 11,
+    "fields": {
+        "name": "Mass Communication",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 12,
+    "fields": {
+        "name": "Linguistics, Igbo and Other Nigerian Languages",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 13,
+    "fields": {
+        "name": "English and Literary Studies",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 14,
+    "fields": {
+        "name": "Fine and Applied Arts",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 15,
+    "fields": {
+        "name": "History and International Studies",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 16,
+    "fields": {
+        "name": "Archaeology and Tourism",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 17,
+    "fields": {
+        "name": "Theatre and Film Studies",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 18,
+    "fields": {
+        "name": "Foreign Language and Literature",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 19,
+    "fields": {
+        "name": "Music",
+        "alias": null,
+        "faculty": 2
+    }
+},
+{
+    "model": "db.department",
+    "pk": 20,
+    "fields": {
+        "name": "Biochemistry",
+        "alias": null,
+        "faculty": 5
+    }
+},
+{
+    "model": "db.department",
+    "pk": 21,
+    "fields": {
+        "name": "Microbiology",
+        "alias": null,
+        "faculty": 5
+    }
+},
+{
+    "model": "db.department",
+    "pk": 22,
+    "fields": {
+        "name": "Molecular Biology",
+        "alias": null,
+        "faculty": 5
+    }
+},
+{
+    "model": "db.department",
+    "pk": 23,
+    "fields": {
+        "name": "Plant Science and Biotechnology",
+        "alias": null,
+        "faculty": 5
+    }
+},
+{
+    "model": "db.department",
+    "pk": 24,
+    "fields": {
+        "name": "Zoology and Environmental Biology",
+        "alias": null,
+        "faculty": 5
+    }
+},
+{
+    "model": "db.department",
+    "pk": 25,
+    "fields": {
+        "name": "Accountancy",
+        "alias": null,
+        "faculty": 12
+    }
+},
+{
+    "model": "db.department",
+    "pk": 26,
+    "fields": {
+        "name": "Marketing",
+        "alias": null,
+        "faculty": 12
+    }
+},
+{
+    "model": "db.department",
+    "pk": 27,
+    "fields": {
+        "name": "Banking and Finance",
+        "alias": null,
+        "faculty": 12
+    }
+},
+{
+    "model": "db.department",
+    "pk": 28,
+    "fields": {
+        "name": "Management",
+        "alias": null,
+        "faculty": 12
+    }
+},
+{
+    "model": "db.department",
+    "pk": 29,
+    "fields": {
+        "name": "Adult Education",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 30,
+    "fields": {
+        "name": "Arts Education",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 31,
+    "fields": {
+        "name": "Computer Education",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 32,
+    "fields": {
+        "name": "Educational Foundations",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 33,
+    "fields": {
+        "name": "Library Science",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 34,
+    "fields": {
+        "name": "Human Kinetics and Health Education",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 35,
+    "fields": {
+        "name": "Science Education",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 36,
+    "fields": {
+        "name": "Social Science",
+        "alias": null,
+        "faculty": 14
+    }
+},
+{
+    "model": "db.department",
+    "pk": 37,
+    "fields": {
+        "name": "Agricultural and Bioresources Engineering",
+        "alias": null,
+        "faculty": 1
+    }
+},
+{
+    "model": "db.department",
+    "pk": 38,
+    "fields": {
+        "name": "Civil Engineering",
+        "alias": null,
+        "faculty": 1
+    }
+},
+{
+    "model": "db.department",
+    "pk": 39,
+    "fields": {
+        "name": "Electrical Engineering",
+        "alias": null,
+        "faculty": 1
+    }
+},
+{
+    "model": "db.department",
+    "pk": 41,
+    "fields": {
+        "name": "Mechanical Engineering",
+        "alias": null,
+        "faculty": 1
+    }
+},
+{
+    "model": "db.department",
+    "pk": 42,
+    "fields": {
+        "name": "Metallurgical and Materials Engineering",
+        "alias": null,
+        "faculty": 1
+    }
+},
+{
+    "model": "db.department",
+    "pk": 43,
+    "fields": {
+        "name": "Estate Management",
+        "alias": null,
+        "faculty": 16
+    }
+},
+{
+    "model": "db.department",
+    "pk": 44,
+    "fields": {
+        "name": "Architecture",
+        "alias": null,
+        "faculty": 16
+    }
+},
+{
+    "model": "db.department",
+    "pk": 45,
+    "fields": {
+        "name": "Urban and Regional Planning",
+        "alias": null,
+        "faculty": 16
+    }
+},
+{
+    "model": "db.department",
+    "pk": 46,
+    "fields": {
+        "name": "Geoinfomatics and Surveying",
+        "alias": null,
+        "faculty": 16
+    }
+},
+{
+    "model": "db.department",
+    "pk": 47,
+    "fields": {
+        "name": "International and Comparative Law",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 48,
+    "fields": {
+        "name": "Commercial and Corporate Law",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 49,
+    "fields": {
+        "name": "Customary and Indigenous Law",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 50,
+    "fields": {
+        "name": "Jurisprudence and Legal Theory",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 51,
+    "fields": {
+        "name": "Property Law",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 52,
+    "fields": {
+        "name": "Public Law",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 53,
+    "fields": {
+        "name": "Private Law",
+        "alias": null,
+        "faculty": 7
+    }
+},
+{
+    "model": "db.department",
+    "pk": 54,
+    "fields": {
+        "name": "Anaesthesia",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 55,
+    "fields": {
+        "name": "Chemical Pathology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 56,
+    "fields": {
+        "name": "Community Medicine",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 57,
+    "fields": {
+        "name": "Dermatology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 58,
+    "fields": {
+        "name": "Haematology and Immunology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 59,
+    "fields": {
+        "name": "Medical Microbiology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 60,
+    "fields": {
+        "name": "Medicine",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 61,
+    "fields": {
+        "name": "Morbid Anatomy",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 62,
+    "fields": {
+        "name": "Obstetrics and Gynaecology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 63,
+    "fields": {
+        "name": "Ophthalmology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 64,
+    "fields": {
+        "name": "Otorhinolaryngology",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 65,
+    "fields": {
+        "name": "Paediatrics",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 66,
+    "fields": {
+        "name": "Paediatrics Surgery",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 67,
+    "fields": {
+        "name": "Pharmacology/Therapeutics",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 68,
+    "fields": {
+        "name": "Psychological Medicine",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 69,
+    "fields": {
+        "name": "Radiation Medicine",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 70,
+    "fields": {
+        "name": "Surgery",
+        "alias": null,
+        "faculty": 19
+    }
+},
+{
+    "model": "db.department",
+    "pk": 71,
+    "fields": {
+        "name": "Pharmaceutical and Medicinal Chemistry",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 72,
+    "fields": {
+        "name": "Pharmacology and Toxicology",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 73,
+    "fields": {
+        "name": "Pharmaceutics",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 74,
+    "fields": {
+        "name": "Pharmaceutical Technology and Industrial Pharmacy",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 75,
+    "fields": {
+        "name": "Pharmacognosy and Environmental Medicines",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 76,
+    "fields": {
+        "name": "Clinical Pharmacy and Pharmacy Management",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 77,
+    "fields": {
+        "name": "Pharmaceutical Microbiology and Biotechnology",
+        "alias": null,
+        "faculty": 20
+    }
+},
+{
+    "model": "db.department",
+    "pk": 79,
+    "fields": {
+        "name": "Statistics",
+        "alias": null,
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 80,
+    "fields": {
+        "name": "Mathematics",
+        "alias": null,
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 81,
+    "fields": {
+        "name": "Geology",
+        "alias": null,
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 82,
+    "fields": {
+        "name": "Science Laboratory Technology",
+        "alias": null,
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 83,
+    "fields": {
+        "name": "Physics and Astronomy",
+        "alias": null,
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 84,
+    "fields": {
+        "name": "Pure and Industrial Chemistry",
+        "alias": null,
+        "faculty": 4
+    }
+},
+{
+    "model": "db.department",
+    "pk": 85,
+    "fields": {
+        "name": "Public Administration and Local Government",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 86,
+    "fields": {
+        "name": "Economics",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 87,
+    "fields": {
+        "name": "Political Science",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 88,
+    "fields": {
+        "name": "Social Work",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 89,
+    "fields": {
+        "name": "Religion and Cultural Studies",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 90,
+    "fields": {
+        "name": "Psychology",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 91,
+    "fields": {
+        "name": "Philosophy",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 92,
+    "fields": {
+        "name": "Geography",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 93,
+    "fields": {
+        "name": "Sociology and Anthropology",
+        "alias": null,
+        "faculty": 3
+    }
+},
+{
+    "model": "db.department",
+    "pk": 94,
+    "fields": {
+        "name": "Verterinary Pathology and Microbiology",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 95,
+    "fields": {
+        "name": "Verterinary Obstetrics and Reproductive Diseases",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 96,
+    "fields": {
+        "name": "Verterinary Physiology and Pharmacology",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 97,
+    "fields": {
+        "name": "Verterinary Anatomy",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 98,
+    "fields": {
+        "name": "Verterinary Medicine",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 99,
+    "fields": {
+        "name": "Verterinary Animal Health and Production",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 100,
+    "fields": {
+        "name": "Verterinary Parasitology and Entomology",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 101,
+    "fields": {
+        "name": "Verterinary Public Health and Preventive Medicine",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 102,
+    "fields": {
+        "name": "Verterinary Surgery",
+        "alias": null,
+        "faculty": 23
+    }
+},
+{
+    "model": "db.department",
+    "pk": 103,
+    "fields": {
+        "name": "Agricultural Education",
+        "alias": null,
+        "faculty": 24
+    }
+},
+{
+    "model": "db.department",
+    "pk": 104,
+    "fields": {
+        "name": "Business Education",
+        "alias": null,
+        "faculty": 24
+    }
+},
+{
+    "model": "db.department",
+    "pk": 105,
+    "fields": {
+        "name": "Computer and Robotics Education",
+        "alias": null,
+        "faculty": 24
+    }
+},
+{
+    "model": "db.department",
+    "pk": 106,
+    "fields": {
+        "name": "Home Economics and Hospitality Management Education",
+        "alias": null,
+        "faculty": 24
+    }
+},
+{
+    "model": "db.department",
+    "pk": 107,
+    "fields": {
+        "name": "Industrial Technical Education",
+        "alias": null,
+        "faculty": 24
+    }
+},
+{
+    "model": "db.department",
+    "pk": 108,
+    "fields": {
+        "name": "Natural Science Unit",
+        "alias": null,
+        "faculty": 59
+    }
+},
+{
+    "model": "db.department",
+    "pk": 109,
+    "fields": {
+        "name": "Use of English Unit",
+        "alias": null,
+        "faculty": 59
+    }
+},
+{
+    "model": "db.department",
+    "pk": 110,
+    "fields": {
+        "name": "Social Science Unit",
+        "alias": null,
+        "faculty": 59
+    }
+},
+{
+    "model": "db.department",
+    "pk": 111,
+    "fields": {
+        "name": "Humanities Unit",
+        "alias": null,
+        "faculty": 59
+    }
+},
+{
+    "model": "db.appuser",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$320000$wSF51GELxkAdTCc2xx5oeB$GwMANZerxOYrYswaTWY3roSuxRLkQT8a5UYv5OmLrRg=",
+        "last_login": "2022-08-17T19:55:50.876Z",
+        "is_superuser": true,
+        "username": "SS.324",
+        "first_name": "Sprite",
+        "last_name": "Supreme",
+        "email": "sprite.supreme@tams.org",
+        "is_staff": true,
+        "date_joined": "2022-07-31T18:42:51.348Z",
+        "other_names": null,
+        "fingerprint_template": null,
+        "face_encodings": null,
+        "sex": 1,
+        "is_active": true,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "db.staff",
+    "pk": "SS.324",
+    "fields": {
+        "appuser_ptr": 1,
+        "department": 1,
+        "is_exam_officer": false,
+        "staff_titles": []
+    }
+},
+{
+    "model": "db.student",
+    "pk": "2020/123456",
+    "fields": {
+        "first_name": "John",
+        "last_name": "Doe",
+        "other_names": null,
+        "department": 1,
+        "possible_grad_yr": 2025,
+        "admission_status": 1,
+        "level_of_study": 2,
+        "fingerprint_template": null,
+        "face_encodings": null,
+        "sex": 1,
+        "is_active": true
+    }
+},
+{
+    "model": "db.student",
+    "pk": "2020/123457",
+    "fields": {
+        "first_name": "Ugo",
+        "last_name": "Shaveme",
+        "other_names": null,
+        "department": 1,
+        "possible_grad_yr": 2025,
+        "admission_status": 1,
+        "level_of_study": 2,
+        "fingerprint_template": null,
+        "face_encodings": null,
+        "sex": 2,
+        "is_active": true
+    }
+},
+{
+    "model": "db.student",
+    "pk": "2020/123458",
+    "fields": {
+        "first_name": "Eli",
+        "last_name": "Nsibidi",
+        "other_names": null,
+        "department": 1,
+        "possible_grad_yr": 2025,
+        "admission_status": 1,
+        "level_of_study": 2,
+        "fingerprint_template": null,
+        "face_encodings": null,
+        "sex": 1,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 1,
+    "fields": {
+        "code": "ECE 272",
+        "title": "Introduction to Engineering Programming",
+        "level_of_study": 2,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 74,
+    "fields": {
+        "code": "ECE 262",
+        "title": "Engineering Computer Programming Laboratory",
+        "level_of_study": 2,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 75,
+    "fields": {
+        "code": "ECE 271",
+        "title": "Engineering Computer Programming",
+        "level_of_study": 2,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 76,
+    "fields": {
+        "code": "ECE 272",
+        "title": "ENGINEERING COMPUTER PROGRAMMING",
+        "level_of_study": 2,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 77,
+    "fields": {
+        "code": "ECE 281",
+        "title": "Engineering Computer Programming Lab",
+        "level_of_study": 2,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 78,
+    "fields": {
+        "code": "ECE 282",
+        "title": "INTRODUCTION TO ENGINEERING COMPUTER PROGRAMMING",
+        "level_of_study": 2,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 79,
+    "fields": {
+        "code": "ECE 311",
+        "title": "Circuit Theory I",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 80,
+    "fields": {
+        "code": "ECE 312",
+        "title": "Circuit Theory II",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 81,
+    "fields": {
+        "code": "ECE 321",
+        "title": "Physical Electronics",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 82,
+    "fields": {
+        "code": "ECE 322",
+        "title": "Applied Electronics I",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 83,
+    "fields": {
+        "code": "ECE 331",
+        "title": "Electromagnetic Fields and Waves I",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 85,
+    "fields": {
+        "code": "ECE 332",
+        "title": "Electromagnetic Fields and Waves II",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 87,
+    "fields": {
+        "code": "ECE 361",
+        "title": "Electronic Measurements",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 88,
+    "fields": {
+        "code": "ECE 361",
+        "title": "Electronic Measurement and instrumentation",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 89,
+    "fields": {
+        "code": "ECE 362",
+        "title": "Applied Electronics Laboratory",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 90,
+    "fields": {
+        "code": "ECE 363",
+        "title": "Physical Electronics Laboratory",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 91,
+    "fields": {
+        "code": "ECE 364",
+        "title": "Measurement and Instrumentation Laboratory",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 92,
+    "fields": {
+        "code": "ECE 371",
+        "title": "System Programming",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 93,
+    "fields": {
+        "code": "ECE 381",
+        "title": "Physical Electronics Laboratory",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 94,
+    "fields": {
+        "code": "ECE 382",
+        "title": "Applied Electronics Laboratory",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 95,
+    "fields": {
+        "code": "ECE 383",
+        "title": "Measurements and Instrumentation Laboratory",
+        "level_of_study": 3,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 96,
+    "fields": {
+        "code": "ECE 421",
+        "title": "Applied Electronics II",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 97,
+    "fields": {
+        "code": "ECE 421",
+        "title": "Applied Electronics II",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 98,
+    "fields": {
+        "code": "ECE 441",
+        "title": "Communications Principles",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 99,
+    "fields": {
+        "code": "ECE 443",
+        "title": "DATA COMMUNICATION AND NETWORKING FUNDAMENTALS",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 100,
+    "fields": {
+        "code": "ECE 451",
+        "title": "Control Theory",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 101,
+    "fields": {
+        "code": "ECE 461",
+        "title": "Electronic Instrumentation",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 102,
+    "fields": {
+        "code": "ECE 461",
+        "title": "Telecommunications and Fields Laboratory",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 103,
+    "fields": {
+        "code": "ECE 463",
+        "title": "CONTROL ENGINEERING LABORATORY",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 104,
+    "fields": {
+        "code": "ECE 465",
+        "title": "APPLIED ELECTRONICS AND DIGITAL LOGIC LABORATORY",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 105,
+    "fields": {
+        "code": "ECE 471",
+        "title": "Digital Electronics",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 106,
+    "fields": {
+        "code": "ECE 472",
+        "title": "Digital Logic Theory I",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 107,
+    "fields": {
+        "code": "ECE 473",
+        "title": "Digital Logic Theory II",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 108,
+    "fields": {
+        "code": "ECE 473",
+        "title": "DIGITAL LOGIC",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 109,
+    "fields": {
+        "code": "ECE 481",
+        "title": "TELECOMMUNICATIONS AND FIELDS LABORATORY",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 110,
+    "fields": {
+        "code": "ECE 482",
+        "title": "Communications and Fields Laboratory",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": false
+    }
+},
+{
+    "model": "db.course",
+    "pk": 111,
+    "fields": {
+        "code": "ECE 482",
+        "title": "Applied Electronics and Digital Logic Laboratory",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 112,
+    "fields": {
+        "code": "ECE 482",
+        "title": "SEMINARS",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 113,
+    "fields": {
+        "code": "ECE 483",
+        "title": "Control Laboratory",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 114,
+    "fields": {
+        "code": "ECE 491",
+        "title": "Technical Writing and Seminars",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 1,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 115,
+    "fields": {
+        "code": "ECE 494",
+        "title": "TECHNICAL WRITING",
+        "level_of_study": 4,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 116,
+    "fields": {
+        "code": "ECE 511",
+        "title": "Systems Engineering",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 117,
+    "fields": {
+        "code": "ECE 512",
+        "title": "Communication Networks",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 118,
+    "fields": {
+        "code": "ECE 521",
+        "title": "Advanced Circuit Techniques",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 119,
+    "fields": {
+        "code": "ECE 522",
+        "title": "Solid State Electronics",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 120,
+    "fields": {
+        "code": "ECE 523",
+        "title": "Industrial Electronics Design",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 121,
+    "fields": {
+        "code": "ECE 524",
+        "title": "Optoelectronics",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 122,
+    "fields": {
+        "code": "ECE 524",
+        "title": "SOLID STATE ELECTRONICS",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 123,
+    "fields": {
+        "code": "ECE 525",
+        "title": "Electroacoustics",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 124,
+    "fields": {
+        "code": "ECE 526",
+        "title": "Medical Electronics",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 125,
+    "fields": {
+        "code": "ECE 541",
+        "title": "Communications Systems",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 126,
+    "fields": {
+        "code": "ECE 542",
+        "title": "Telecommunication Engineering",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 127,
+    "fields": {
+        "code": "ECE 543",
+        "title": "Television and Radio",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 128,
+    "fields": {
+        "code": "ECE 544",
+        "title": "Microwave Communication Systems Design",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 129,
+    "fields": {
+        "code": "ECE 545",
+        "title": "Introduction to Radar and Navigation Systems",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 130,
+    "fields": {
+        "code": "ECE 551",
+        "title": "Control Systems",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 131,
+    "fields": {
+        "code": "ECE 552",
+        "title": "Advanced Control Engineering",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 132,
+    "fields": {
+        "code": "ECE 553",
+        "title": "Linear Systems Theory",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 133,
+    "fields": {
+        "code": "ECE 554",
+        "title": "Process Control",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 134,
+    "fields": {
+        "code": "ECE 561",
+        "title": "Digital Instrumentation",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 135,
+    "fields": {
+        "code": "ECE 571",
+        "title": "Microprocessing Systems",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 136,
+    "fields": {
+        "code": "ECE 572",
+        "title": "Analogue and Digital Computer Systems",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 137,
+    "fields": {
+        "code": "ECE 573",
+        "title": "Software Engineering",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 1,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 138,
+    "fields": {
+        "code": "ECE 574",
+        "title": "Digital Signal Processing",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 2,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 139,
+    "fields": {
+        "code": "ECE 575",
+        "title": "Digital Systems Design",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 140,
+    "fields": {
+        "code": "ECE 576",
+        "title": "Microprocessor Systems Design",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 141,
+    "fields": {
+        "code": "ECE 577",
+        "title": "Computer Systems Design",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 142,
+    "fields": {
+        "code": "ECE 578",
+        "title": "Artificial Intelligence and Robotics",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 143,
+    "fields": {
+        "code": "ECE 579",
+        "title": "Database Management Systems",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 3,
+        "semester": 2,
+        "elective": true,
+        "is_active": true
+    }
+},
+{
+    "model": "db.course",
+    "pk": 144,
+    "fields": {
+        "code": "ECE 591",
+        "title": "Project",
+        "level_of_study": 5,
+        "department": 1,
+        "unit_load": 4,
+        "semester": 2,
+        "elective": false,
+        "is_active": true
+    }
+},
+{
+    "model": "db.nodedevice",
+    "pk": 1,
+    "fields": {
+        "name": "TAMS 1",
+        "token": "FSPKs27erBMbLJCEa3RjUsv4Zilh8D5sY780aska6vI"
+    }
+},
+{
+    "model": "db.nodedevice",
+    "pk": 2,
+    "fields": {
+        "name": "TAMS 2",
+        "token": "rZnSfVW6L-Xo3BWi1Ppr3Ph827_jg-4nWE_0LE7kG50"
+    }
+},
+{
+    "model": "db.nodedevice",
+    "pk": 3,
+    "fields": {
+        "name": "TAMS 3",
+        "token": "LxbOL5GoIxpIS1INZ6n_LSw8aK476q17Ve6_SMTTjBU"
+    }
+},
+{
+    "model": "db.academicsession",
+    "pk": 1,
+    "fields": {
+        "session": "2019/2020",
+        "is_current_session": false
+    }
+},
+{
+    "model": "db.academicsession",
+    "pk": 2,
+    "fields": {
+        "session": "2020/2021",
+        "is_current_session": true
+    }
+},
+{
+    "model": "db.attendancesession",
+    "pk": "9293949aa81ef669b1d5060a6457bffe",
+    "fields": {
+        "node_device": 1,
+        "initiator": "SS.324",
+        "course": 1,
+        "session": 1,
+        "event_type": 1,
+        "start_time": "2022-07-31T18:44:23.300Z",
+        "duration": "01:00:00",
+        "created_on": "2022-07-31T18:50:09.063Z",
+        "status": 2,
+        "recurring": false
+    }
+},
+{
+    "model": "db.attendancerecord",
+    "pk": 3,
+    "fields": {
+        "attendance_session": "9293949aa81ef669b1d5060a6457bffe",
+        "student": "2020/123456",
+        "record_type": 1,
+        "check_in_by": "2022-07-31T18:54:24.520Z",
+        "check_out_by": null,
+        "is_valid": true
+    }
+},
+{
+    "model": "db.attendancerecord",
+    "pk": 4,
+    "fields": {
+        "attendance_session": "9293949aa81ef669b1d5060a6457bffe",
+        "student": "2020/123457",
+        "record_type": 1,
+        "check_in_by": "2022-07-31T18:54:34.013Z",
+        "check_out_by": null,
+        "is_valid": true
+    }
+},
+{
+    "model": "db.attendancerecord",
+    "pk": 7,
+    "fields": {
+        "attendance_session": "9293949aa81ef669b1d5060a6457bffe",
+        "student": "2020/123458",
+        "record_type": 1,
+        "check_in_by": "2022-07-31T18:55:01.538Z",
+        "check_out_by": null,
+        "is_valid": true
+    }
+},
+{
+    "model": "db.courseregistration",
+    "pk": 1,
+    "fields": {
+        "session": 1,
+        "semester": 1,
+        "course": 1,
+        "student": "2020/123456"
+    }
+},
+{
+    "model": "authtoken.token",
+    "pk": "0c913b78e80451b7c22faee91c118e04553806e0",
+    "fields": {
+        "user": 1,
+        "created": "2022-07-31T19:37:47.694Z"
+    }
+}
+]
