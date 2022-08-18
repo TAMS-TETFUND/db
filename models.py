@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -82,36 +83,6 @@ class RecordTypesChoices(AppIntegerChoices):
     SIGN_OUT = 2, "Sign Out"
 
 
-class AdmissionStatus(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    status = models.CharField(max_length=255)
-
-
-class Semester(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    semester = models.CharField(max_length=20)
-
-
-class Sex(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    sex = models.CharField(max_length=20)
-
-
-class EventType(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    type = models.CharField(max_length=100)
-
-
-class AttendanceSessionStatus(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    status = models.CharField(max_length=50)
-
-
-class RecordTypes(models.Model):
-    id = models.SmallAutoField(primary_key=True)
-    type = models.CharField(max_length=50)
-
-
 class StaffTitle(models.Model):
     id = models.BigAutoField(primary_key=True)
     title_full = models.CharField(max_length=50)
@@ -124,7 +95,7 @@ class StaffTitle(models.Model):
                 Upper(Replace("title", Value("."), Value(""))),
                 name="conflicting_title_abbreviation",
             ),
-            models.UniqueConstraint(Upper("title_full"), name="unique_title")
+            models.UniqueConstraint(Upper("title_full"), name="unique_title"),
         ]
 
     def __str__(self):
@@ -154,6 +125,7 @@ class Department(models.Model):
     name = models.CharField(max_length=500)
     alias = models.CharField(max_length=20, null=True, blank=True)
     faculty = models.ForeignKey(to=Faculty, on_delete=models.CASCADE)
+
     # program_duration = models.IntegerField() :what program are you considering; there are many program types: new model may be necessary
 
     class Meta:
@@ -179,16 +151,17 @@ class Department(models.Model):
 
 
 class AppUser(AbstractUser):
-    id = models.BigAutoField(primary_key=True)
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=SexChoices.choices)
-    # is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
 
 class Staff(AppUser):
-    staff_number = models.CharField(max_length=25, unique=True)
+    staff_number = models.CharField(
+        primary_key=True, max_length=25, unique=True
+    )
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     is_exam_officer = models.BooleanField(default=False)
     staff_titles = models.ManyToManyField(StaffTitle)
@@ -214,21 +187,21 @@ class AppAdmin(AppUser):
 
 
 class Student(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    reg_number = models.CharField(max_length=12, unique=True)
+    reg_number = models.TextField(primary_key=True, unique=True)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     other_names = models.CharField(max_length=255, null=True, blank=True)
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     possible_grad_yr = models.IntegerField()
     admission_status = models.IntegerField(
-        choices=AdmissionStatusChoices.choices, default=AdmissionStatusChoices.REGULAR
+        choices=AdmissionStatusChoices.choices,
+        default=AdmissionStatusChoices.REGULAR,
     )
     level_of_study = models.IntegerField(null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=SexChoices.choices)
-    # is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=True)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} ({self.reg_number}),\
@@ -284,7 +257,9 @@ class Course(models.Model):
         course_list = cls.objects.all().exclude(is_active=False)
         if semester and semester in SemesterChoices.labels:
             course_list = course_list.filter(
-                semester=SemesterChoices.values[SemesterChoices.labels.index(semester)]
+                semester=SemesterChoices.values[
+                    SemesterChoices.labels.index(semester)
+                ]
             )
 
         if (
@@ -318,6 +293,35 @@ class Course(models.Model):
             return course_obj.id
 
 
+class NodeDevice(models.Model):
+    """A model that keeps record of every legitimate node device
+    to avoid processing data from unauthorized/unknown devices.
+    """
+
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=255, blank=True)
+    token = models.TextField(blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.id is None:
+            self.id = self.next_valid_id()
+        if self.name in (None, ""):
+            self.name = self.next_device_name(self.next_valid_id())
+        if self.token in (None, ""):
+            self.token = secrets.token_urlsafe(32)
+        super(NodeDevice, self).save(*args, **kwargs)
+
+    @staticmethod
+    def next_valid_id():
+        next_id = NodeDevice.objects.filter(id__gt=0).order_by("id").last()
+        next_id = 1 if next_id is None else (next_id.pk + 1)
+        return next_id
+
+    @staticmethod
+    def next_device_name(next_valid_id):
+        return f"TAMS {next_valid_id}"
+
+
 class AcademicSession(models.Model):
     id = models.BigAutoField(primary_key=True)
     session = models.CharField(max_length=10, unique=True)
@@ -328,7 +332,7 @@ class AcademicSession(models.Model):
             raise ValidationError({"session": "Invalid session value"})
 
     def save(self, *args, **kwargs):
-        self.clean
+        self.clean()
         if self.is_current_session:
             qs = type(self).objects.filter(is_current_session=True)
 
@@ -356,10 +360,10 @@ class AcademicSession(models.Model):
 
 
 class AttendanceSession(models.Model):
-    id = models.BigAutoField(primary_key=True)
-    # node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
+    id = models.CharField(primary_key=True, null=False, max_length=50)
+    node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
-        to=AppUser, on_delete=models.CASCADE, null=True, blank=True
+        to=Staff, on_delete=models.CASCADE, null=True, blank=True
     )
     course = models.ForeignKey(to=Course, on_delete=models.CASCADE)
     session = models.ForeignKey(to=AcademicSession, on_delete=models.CASCADE)
@@ -372,6 +376,21 @@ class AttendanceSession(models.Model):
         default=AttendanceSessionStatusChoices.ACTIVE,
     )
     recurring = models.BooleanField(default=False)
+
+    def clean(self):
+        if not self.id:
+            self.id = (
+                str(self.node_device_id)
+                + str(timezone.now())
+                + str(self.duration)
+            )
+            print("before hashing", self.id)
+            self.id = hashlib.md5(self.id.encode()).hexdigest()
+            print("proposed id", self.id)
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super().save(*args, **kwargs)
 
     class Meta:
         constraints = [
@@ -391,11 +410,14 @@ class AttendanceRecord(models.Model):
     attendance_session = models.ForeignKey(
         to=AttendanceSession, on_delete=models.CASCADE
     )
-    student = models.ForeignKey(to=Student, on_delete=models.CASCADE)
+    student = models.ForeignKey(
+        to=Student, on_delete=models.CASCADE, to_field="reg_number"
+    )
     record_type = models.IntegerField(
         choices=RecordTypesChoices.choices, default=RecordTypesChoices.SIGN_IN
     )
-    logged_by = models.DateTimeField(auto_now_add=True)
+    check_in_by = models.DateTimeField(auto_now_add=True)
+    check_out_by = models.DateTimeField(blank=True, null=True)
     is_valid = models.BooleanField(default=True)
 
     class Meta:
@@ -405,6 +427,16 @@ class AttendanceRecord(models.Model):
                 name="unique_attendance_record",
             ),
         ]
+
+    def clean(self):
+        if self.record_type != RecordTypesChoices.SIGN_IN:
+            saved_record = AttendanceRecord.objects.get(pk=self.pk)
+            if self.record_type != saved_record.record_type:
+                self.check_out_by = timezone.now()
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        return super().save(*args, **kwargs)
 
 
 class CourseRegistration(models.Model):
@@ -431,32 +463,3 @@ class CourseRegistration(models.Model):
     def save(self, *args, **kwargs):
         self.clean()
         return super(CourseRegistration, self).save(*args, **kwargs)
-
-
-class NodeDevice(models.Model):
-    """A model that keeps record of every legitimate node device
-    to avoid processing data from unauthorized/unknown devices.
-    """
-
-    id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=255)
-    token = models.CharField(max_length=64)
-
-    def save(self, *args, **kwargs):
-        if self.id is None:
-            self.id = self.next_valid_id()
-        if self.name in (None, ""):
-            self.name = self.next_device_name(self.next_valid_id())
-        if self.token in (None, ""):
-            self.token = secrets.token_urlsafe(32)
-        super(NodeDevice, self).save(*args, **kwargs)
-
-    @staticmethod
-    def next_valid_id():
-        next_id = NodeDevice.objects.filter(id__gt=0).order_by("id").last()
-        next_id = 1 if next_id is None else (next_id.pk + 1)
-        return next_id
-
-    @staticmethod
-    def next_device_name(next_valid_id):
-        return f"TAMS {next_valid_id}"

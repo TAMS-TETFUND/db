@@ -27,6 +27,13 @@ import json
 
 import pandas as pd
 
+EXCLUDED_TABLES = (
+    "db.appadmin",
+    "db.attendancerecord",
+    "db.attendancesession",
+    "db.nodedevice",
+)
+
 SERVER_DUMP = (
     "StaffTitle",
     "Faculty",
