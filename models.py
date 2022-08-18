@@ -159,7 +159,9 @@ class AppUser(AbstractUser):
 
 
 class Staff(AppUser):
-    staff_number = models.CharField(primary_key=True, max_length=25, unique=True)
+    staff_number = models.CharField(
+        primary_key=True, max_length=25, unique=True
+    )
     department = models.ForeignKey(to=Department, on_delete=models.CASCADE)
     is_exam_officer = models.BooleanField(default=False)
     staff_titles = models.ManyToManyField(StaffTitle)
@@ -245,12 +247,12 @@ class Course(models.Model):
 
     @classmethod
     def get_courses(
-            cls,
-            *,
-            semester=None,
-            faculty=None,
-            department=None,
-            level_of_study=None,
+        cls,
+        *,
+        semester=None,
+        faculty=None,
+        department=None,
+        level_of_study=None,
     ):
         course_list = cls.objects.all().exclude(is_active=False)
         if semester and semester in SemesterChoices.labels:
@@ -261,8 +263,8 @@ class Course(models.Model):
             )
 
         if (
-                department
-                and Department.objects.filter(name__iexact=department).exists()
+            department
+            and Department.objects.filter(name__iexact=department).exists()
         ):
             course_list = course_list.filter(
                 department__name__iexact=department
@@ -375,15 +377,18 @@ class AttendanceSession(models.Model):
     )
     recurring = models.BooleanField(default=False)
 
-
     def clean(self):
         if not self.id:
-            self.id = str(self.node_device_id) + str(timezone.now()) + str(self.duration)
+            self.id = (
+                str(self.node_device_id)
+                + str(timezone.now())
+                + str(self.duration)
+            )
             print("before hashing", self.id)
             self.id = hashlib.md5(self.id.encode()).hexdigest()
             print("proposed id", self.id)
-    
-    def save(self, *args, **kwargs):    
+
+    def save(self, *args, **kwargs):
         self.clean()
         super().save(*args, **kwargs)
 
@@ -405,7 +410,9 @@ class AttendanceRecord(models.Model):
     attendance_session = models.ForeignKey(
         to=AttendanceSession, on_delete=models.CASCADE
     )
-    student = models.ForeignKey(to=Student, on_delete=models.CASCADE, to_field='reg_number')
+    student = models.ForeignKey(
+        to=Student, on_delete=models.CASCADE, to_field="reg_number"
+    )
     record_type = models.IntegerField(
         choices=RecordTypesChoices.choices, default=RecordTypesChoices.SIGN_IN
     )
