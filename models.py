@@ -125,7 +125,6 @@ class Department(models.Model):
     name = models.CharField(max_length=500)
     alias = models.CharField(max_length=20, null=True, blank=True)
     faculty = models.ForeignKey(to=Faculty, on_delete=models.CASCADE)
-
     # program_duration = models.IntegerField() :what program are you considering; there are many program types: new model may be necessary
 
     class Meta:
@@ -150,15 +149,12 @@ class Department(models.Model):
         return Department.objects.get(name__iexact=department_name).id
 
 
-class AppUser(AbstractUser):
+class Staff(AbstractUser):
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=SexChoices.choices)
     is_active = models.BooleanField(default=True)
-
-
-class Staff(AppUser):
     staff_number = models.CharField(
         primary_key=True, max_length=25, unique=True
     )
@@ -180,10 +176,6 @@ class Staff(AppUser):
     @staticmethod
     def is_valid_staff_number(staff_no):
         return bool(re.search(STAFF_NO_FORMAT, staff_no.upper()))
-
-
-class AppAdmin(AppUser):
-    clearance_number = models.IntegerField(default=1)
 
 
 class Student(models.Model):
