@@ -157,6 +157,9 @@ class AppUser(AbstractUser):
     sex = models.IntegerField(choices=SexChoices.choices)
     is_active = models.BooleanField(default=True)
 
+    class Meta:
+        abstract = True
+
 
 class Staff(AppUser):
     staff_number = models.CharField(
@@ -180,10 +183,6 @@ class Staff(AppUser):
     @staticmethod
     def is_valid_staff_number(staff_no):
         return bool(re.search(STAFF_NO_FORMAT, staff_no.upper()))
-
-
-class AppAdmin(AppUser):
-    clearance_number = models.IntegerField(default=1)
 
 
 class Student(models.Model):
