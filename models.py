@@ -125,7 +125,6 @@ class Department(models.Model):
     name = models.CharField(max_length=500, unique=True)
     alias = models.CharField(max_length=20, null=True, blank=True)
     faculty = models.ForeignKey(to=Faculty, on_delete=models.CASCADE)
-
     # program_duration = models.IntegerField() :what program are you considering; there are many program types: new model may be necessary
 
     class Meta:
@@ -150,18 +149,12 @@ class Department(models.Model):
         return Department.objects.get(name__iexact=department_name).id
 
 
-class AppUser(AbstractUser):
+class Staff(AbstractUser):
     other_names = models.CharField(max_length=255, null=True, blank=True)
     fingerprint_template = models.TextField(null=True, blank=True)
     face_encodings = models.TextField(null=True, blank=True)
     sex = models.IntegerField(choices=SexChoices.choices)
     is_active = models.BooleanField(default=True)
-
-    class Meta:
-        abstract = True
-
-
-class Staff(AppUser):
     staff_number = models.CharField(
         primary_key=True, max_length=25, unique=True
     )
@@ -246,12 +239,12 @@ class Course(models.Model):
 
     @classmethod
     def get_courses(
-            cls,
-            *,
-            semester=None,
-            faculty=None,
-            department=None,
-            level_of_study=None,
+        cls,
+        *,
+        semester=None,
+        faculty=None,
+        department=None,
+        level_of_study=None,
     ):
         course_list = cls.objects.all().exclude(is_active=False)
         if semester and semester in SemesterChoices.labels:
@@ -262,8 +255,8 @@ class Course(models.Model):
             )
 
         if (
-                department
-                and Department.objects.filter(name__iexact=department).exists()
+            department
+            and Department.objects.filter(name__iexact=department).exists()
         ):
             course_list = course_list.filter(
                 department__name__iexact=department
@@ -359,7 +352,7 @@ class AcademicSession(models.Model):
 
 
 class AttendanceSession(models.Model):
-    id = models.CharField(primary_key=True, null=False, max_length=50, unique=True)
+    id = models.CharField(primary_key=True, null=False, max_length=50)
     node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
         to=Staff, on_delete=models.CASCADE, null=True, blank=True
@@ -377,7 +370,7 @@ class AttendanceSession(models.Model):
     sync_status = models.BooleanField(default=False)
     recurring = models.BooleanField(default=False)
 
-    def save(self, *args, **kwargs):
+    def clean(self):
         if not self.id:
 
             self.id = (
@@ -386,7 +379,10 @@ class AttendanceSession(models.Model):
                     + str(self.duration)
             )
             self.id = hashlib.md5(self.id.encode()).hexdigest()
+            print("proposed id", self.id)
 
+    def save(self, *args, **kwargs):
+        self.clean()
         super().save(*args, **kwargs)
 
     class Meta:
