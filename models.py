@@ -122,7 +122,7 @@ class Faculty(models.Model):
 
 class Department(models.Model):
     id = models.BigAutoField(primary_key=True)
-    name = models.CharField(max_length=500)
+    name = models.CharField(max_length=500, unique=True)
     alias = models.CharField(max_length=20, null=True, blank=True)
     faculty = models.ForeignKey(to=Faculty, on_delete=models.CASCADE)
 
@@ -157,6 +157,9 @@ class AppUser(AbstractUser):
     sex = models.IntegerField(choices=SexChoices.choices)
     is_active = models.BooleanField(default=True)
 
+    class Meta:
+        abstract = True
+
 
 class Staff(AppUser):
     staff_number = models.CharField(
@@ -180,10 +183,6 @@ class Staff(AppUser):
     @staticmethod
     def is_valid_staff_number(staff_no):
         return bool(re.search(STAFF_NO_FORMAT, staff_no.upper()))
-
-
-class AppAdmin(AppUser):
-    clearance_number = models.IntegerField(default=1)
 
 
 class Student(models.Model):
@@ -247,12 +246,12 @@ class Course(models.Model):
 
     @classmethod
     def get_courses(
-        cls,
-        *,
-        semester=None,
-        faculty=None,
-        department=None,
-        level_of_study=None,
+            cls,
+            *,
+            semester=None,
+            faculty=None,
+            department=None,
+            level_of_study=None,
     ):
         course_list = cls.objects.all().exclude(is_active=False)
         if semester and semester in SemesterChoices.labels:
@@ -263,8 +262,8 @@ class Course(models.Model):
             )
 
         if (
-            department
-            and Department.objects.filter(name__iexact=department).exists()
+                department
+                and Department.objects.filter(name__iexact=department).exists()
         ):
             course_list = course_list.filter(
                 department__name__iexact=department
@@ -360,7 +359,7 @@ class AcademicSession(models.Model):
 
 
 class AttendanceSession(models.Model):
-    id = models.CharField(primary_key=True, null=False, max_length=50)
+    id = models.CharField(primary_key=True, null=False, max_length=50, unique=True)
     node_device = models.ForeignKey(to=NodeDevice, on_delete=models.CASCADE)
     initiator = models.ForeignKey(
         to=Staff, on_delete=models.CASCADE, null=True, blank=True
@@ -375,14 +374,16 @@ class AttendanceSession(models.Model):
         choices=AttendanceSessionStatusChoices.choices,
         default=AttendanceSessionStatusChoices.ACTIVE,
     )
+    sync_status = models.BooleanField(default=False)
     recurring = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         if not self.id:
+
             self.id = (
-                str(self.node_device_id)
-                + str(self.created_on)
-                + str(self.duration)
+                    str(self.node_device_id)
+                    + str(timezone.now())
+                    + str(self.duration)
             )
             self.id = hashlib.md5(self.id.encode()).hexdigest()
 
@@ -423,16 +424,6 @@ class AttendanceRecord(models.Model):
                 name="unique_attendance_record",
             ),
         ]
-
-    def clean(self):
-        if self.record_type != RecordTypesChoices.SIGN_IN:
-            saved_record = AttendanceRecord.objects.get(pk=self.pk)
-            if self.record_type != saved_record.record_type:
-                self.check_out_by = timezone.now()
-
-    def save(self, *args, **kwargs):
-        self.clean()
-        return super().save(*args, **kwargs)
 
 
 class CourseRegistration(models.Model):
