@@ -1,0 +1,128 @@
+[
+    {
+        "model": "db.faculty",
+        "pk": 1,
+        "fields": {
+            "name": "Agriculture"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 2,
+        "fields": {
+            "name": "Arts"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 3,
+        "fields": {
+            "name": "Basic Medical Sciences"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 4,
+        "fields": {
+            "name": "Biological Sciences"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 5,
+        "fields": {
+            "name": "Business Administration"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 6,
+        "fields": {
+            "name": "Dentistry"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 7,
+        "fields": {
+            "name": "Education"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 8,
+        "fields": {
+            "name": "Engineering"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 9,
+        "fields": {
+            "name": "Environmental Studies"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 10,
+        "fields": {
+            "name": "Health Science & Technology"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 11,
+        "fields": {
+            "name": "Law"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 12,
+        "fields": {
+            "name": "Medical Sciences"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 13,
+        "fields": {
+            "name": "Pharmaceutical Sciences"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 14,
+        "fields": {
+            "name": "Physical Sciences"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 15,
+        "fields": {
+            "name": "Social Sciences"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 16,
+        "fields": {
+            "name": "Veterinary Medicine"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 17,
+        "fields": {
+            "name": "Vocational & Technical Education"
+        }
+    },
+    {
+        "model": "db.faculty",
+        "pk": 18,
+        "fields": {
+            "name": "School of General Studies"
+        }
+    }
+]

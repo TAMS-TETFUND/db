@@ -1,0 +1,996 @@
+[
+    {
+        "model": "db.course",
+        "pk": 122,
+        "fields": {
+            "code": "ECE 262",
+            "title": "Engineering Computer Programming Laboratory",
+            "level_of_study": 2,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 26,
+        "fields": {
+            "code": "ECE 271",
+            "title": "Engineering Computer Programming",
+            "level_of_study": 2,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 110,
+        "fields": {
+            "code": "ECE 272",
+            "title": "ENGINEERING COMPUTER PROGRAMMING",
+            "level_of_study": 2,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 27,
+        "fields": {
+            "code": "ECE 281",
+            "title": "Engineering Computer Programming Lab",
+            "level_of_study": 2,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 111,
+        "fields": {
+            "code": "ECE 282",
+            "title": "INTRODUCTION TO ENGINEERING COMPUTER PROGRAMMING",
+            "level_of_study": 2,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 36,
+        "fields": {
+            "code": "ECE 311",
+            "title": "Circuit Theory I",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 45,
+        "fields": {
+            "code": "ECE 312",
+            "title": "Circuit Theory II",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 37,
+        "fields": {
+            "code": "ECE 321",
+            "title": "Physical Electronics",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 46,
+        "fields": {
+            "code": "ECE 322",
+            "title": "Applied Electronics I",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 38,
+        "fields": {
+            "code": "ECE 331",
+            "title": "Electromagnetic Fields and Waves I",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 50,
+        "fields": {
+            "code": "ECE 331",
+            "title": "Electrical Power Systems Principles",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 47,
+        "fields": {
+            "code": "ECE 332",
+            "title": "Electromagnetic Fields and Waves II",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 51,
+        "fields": {
+            "code": "ECE 352",
+            "title": "Electrical Power Systems Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 39,
+        "fields": {
+            "code": "ECE 361",
+            "title": "Electronic Measurements",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 212,
+        "fields": {
+            "code": "ECE 361",
+            "title": "Electronic Measurement and instrumentation",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 106,
+        "fields": {
+            "code": "ECE 362",
+            "title": "Applied Electronics Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 97,
+        "fields": {
+            "code": "ECE 363",
+            "title": "Physical Electronics Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 107,
+        "fields": {
+            "code": "ECE 364",
+            "title": "Measurement and Instrumentation Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 96,
+        "fields": {
+            "code": "ECE 371",
+            "title": "System Programming",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 40,
+        "fields": {
+            "code": "ECE 381",
+            "title": "Physical Electronics Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 48,
+        "fields": {
+            "code": "ECE 382",
+            "title": "Applied Electronics Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 49,
+        "fields": {
+            "code": "ECE 383",
+            "title": "Measurements and Instrumentation Laboratory",
+            "level_of_study": 3,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 54,
+        "fields": {
+            "code": "ECE 421",
+            "title": "Applied Electronics II",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 211,
+        "fields": {
+            "code": "ECE 421",
+            "title": "Applied Electronics II",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 55,
+        "fields": {
+            "code": "ECE 441",
+            "title": "Communications Principles",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 116,
+        "fields": {
+            "code": "ECE 443",
+            "title": "DATA COMMUNICATION AND NETWORKING FUNDAMENTALS",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 56,
+        "fields": {
+            "code": "ECE 451",
+            "title": "Control Theory",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 63,
+        "fields": {
+            "code": "ECE 461",
+            "title": "Electronic Instrumentation",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 118,
+        "fields": {
+            "code": "ECE 461",
+            "title": "Telecommunications and Fields Laboratory",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 114,
+        "fields": {
+            "code": "ECE 463",
+            "title": "CONTROL ENGINEERING LABORATORY",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 115,
+        "fields": {
+            "code": "ECE 465",
+            "title": "APPLIED ELECTRONICS AND DIGITAL LOGIC LABORATORY",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 57,
+        "fields": {
+            "code": "ECE 471",
+            "title": "Digital Electronics",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 58,
+        "fields": {
+            "code": "ECE 472",
+            "title": "Digital Logic Theory I",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 64,
+        "fields": {
+            "code": "ECE 473",
+            "title": "Digital Logic Theory II",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 200,
+        "fields": {
+            "code": "ECE 473",
+            "title": "DIGITAL LOGIC",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 117,
+        "fields": {
+            "code": "ECE 481",
+            "title": "TELECOMMUNICATIONS AND FIELDS LABORATORY",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 59,
+        "fields": {
+            "code": "ECE 482",
+            "title": "Communications and Fields Laboratory",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 60,
+        "fields": {
+            "code": "ECE 482",
+            "title": "Applied Electronics and Digital Logic Laboratory",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 133,
+        "fields": {
+            "code": "ECE 482",
+            "title": "SEMINARS",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 61,
+        "fields": {
+            "code": "ECE 483",
+            "title": "Control Laboratory",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 65,
+        "fields": {
+            "code": "ECE 491",
+            "title": "Technical Writing and Seminars",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 1,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 113,
+        "fields": {
+            "code": "ECE 494",
+            "title": "TECHNICAL WRITING",
+            "level_of_study": 4,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 74,
+        "fields": {
+            "code": "ECE 511",
+            "title": "Systems Engineering",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 79,
+        "fields": {
+            "code": "ECE 512",
+            "title": "Communication Networks",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 67,
+        "fields": {
+            "code": "ECE 521",
+            "title": "Advanced Circuit Techniques",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 68,
+        "fields": {
+            "code": "ECE 522",
+            "title": "Solid State Electronics",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 75,
+        "fields": {
+            "code": "ECE 523",
+            "title": "Industrial Electronics Design",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 92,
+        "fields": {
+            "code": "ECE 524",
+            "title": "Optoelectronics",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 132,
+        "fields": {
+            "code": "ECE 524",
+            "title": "SOLID STATE ELECTRONICS",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 80,
+        "fields": {
+            "code": "ECE 525",
+            "title": "Electroacoustics",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 93,
+        "fields": {
+            "code": "ECE 526",
+            "title": "Medical Electronics",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 69,
+        "fields": {
+            "code": "ECE 541",
+            "title": "Communications Systems",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 76,
+        "fields": {
+            "code": "ECE 542",
+            "title": "Telecommunication Engineering",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 81,
+        "fields": {
+            "code": "ECE 543",
+            "title": "Television and Radio",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 82,
+        "fields": {
+            "code": "ECE 544",
+            "title": "Microwave Communication Systems Design",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 83,
+        "fields": {
+            "code": "ECE 545",
+            "title": "Introduction to Radar and Navigation Systems",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 70,
+        "fields": {
+            "code": "ECE 551",
+            "title": "Control Systems",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 84,
+        "fields": {
+            "code": "ECE 552",
+            "title": "Advanced Control Engineering",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 85,
+        "fields": {
+            "code": "ECE 553",
+            "title": "Linear Systems Theory",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 86,
+        "fields": {
+            "code": "ECE 554",
+            "title": "Process Control",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 94,
+        "fields": {
+            "code": "ECE 561",
+            "title": "Digital Instrumentation",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 71,
+        "fields": {
+            "code": "ECE 571",
+            "title": "Microprocessing Systems",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 72,
+        "fields": {
+            "code": "ECE 572",
+            "title": "Analogue and Digital Computer Systems",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 73,
+        "fields": {
+            "code": "ECE 573",
+            "title": "Software Engineering",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 1,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 77,
+        "fields": {
+            "code": "ECE 574",
+            "title": "Digital Signal Processing",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 2,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 87,
+        "fields": {
+            "code": "ECE 575",
+            "title": "Digital Systems Design",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 88,
+        "fields": {
+            "code": "ECE 576",
+            "title": "Microprocessor Systems Design",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 89,
+        "fields": {
+            "code": "ECE 577",
+            "title": "Computer Systems Design",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 90,
+        "fields": {
+            "code": "ECE 578",
+            "title": "Artificial Intelligence and Robotics",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 91,
+        "fields": {
+            "code": "ECE 579",
+            "title": "Database Management Systems",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 3,
+            "semester": 2,
+            "elective": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "db.course",
+        "pk": 78,
+        "fields": {
+            "code": "ECE 591",
+            "title": "Project",
+            "level_of_study": 5,
+            "department_id": 38,
+            "unit_load": 4,
+            "semester": 2,
+            "elective": false,
+            "is_active": true
+        }
+    }
+]

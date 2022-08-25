@@ -1,0 +1,16 @@
+[
+    {
+        "model": "db.Staff",
+        "pk": "SS.324",
+        "fields": {
+            "first_name": "Obidiwe",
+            "last_name": "Dikeogu",
+            "other_names": "Philemon",
+            "username": "SS.324",
+            "department_id": 38,
+            "is_superuser":true,
+            "is_staff": true,
+            "sex": 1
+        }
+    }
+]

@@ -1,0 +1,874 @@
+[
+    {
+        "model": "db.department",
+        "pk": 1,
+        "fields": {
+            "name": "Agricultural Economics",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 2,
+        "fields": {
+            "name": "Agricultural Extension",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 3,
+        "fields": {
+            "name": "Animal Science",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 4,
+        "fields": {
+            "name": "Crop Science",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 5,
+        "fields": {
+            "name": "Food Science and Technology",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 6,
+        "fields": {
+            "name": "Soil science",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 7,
+        "fields": {
+            "name": "Nutrition and Dietetics",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 8,
+        "fields": {
+            "name": "Home Science and Management",
+            "faculty_id": 1
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 9,
+        "fields": {
+            "name": "Mass Communication",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 10,
+        "fields": {
+            "name": "Linguistics, Igbo and Other Nigerian Languages",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 11,
+        "fields": {
+            "name": "English and Literary Studies",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 12,
+        "fields": {
+            "name": "Fine and Applied Arts",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 13,
+        "fields": {
+            "name": "History and International Studies",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 14,
+        "fields": {
+            "name": "Archaeology and Tourism",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 15,
+        "fields": {
+            "name": "Theatre and Film Studies",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 16,
+        "fields": {
+            "name": "Foreign Language and Literature",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 17,
+        "fields": {
+            "name": "Music",
+            "faculty_id": 2
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 18,
+        "fields": {
+            "name": "Biochemistry",
+            "faculty_id": 4
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 19,
+        "fields": {
+            "name": "Microbiology",
+            "faculty_id": 4
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 20,
+        "fields": {
+            "name": "Molecular Biology",
+            "faculty_id": 4
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 21,
+        "fields": {
+            "name": "Plant Science and Biotechnology",
+            "faculty_id": 4
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 22,
+        "fields": {
+            "name": "Zoology and Environmental Biology",
+            "faculty_id": 4
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 23,
+        "fields": {
+            "name": "Accountancy",
+            "faculty_id": 5
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 24,
+        "fields": {
+            "name": "Marketing",
+            "faculty_id": 5
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 25,
+        "fields": {
+            "name": "Banking and Finance",
+            "faculty_id": 5
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 26,
+        "fields": {
+            "name": "Management",
+            "faculty_id": 5
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 27,
+        "fields": {
+            "name": "Adult Education",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 28,
+        "fields": {
+            "name": "Arts Education",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 29,
+        "fields": {
+            "name": "Computer Education",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 30,
+        "fields": {
+            "name": "Educational Foundations",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 31,
+        "fields": {
+            "name": "Library Science",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 32,
+        "fields": {
+            "name": "Human Kinetics and Health Education",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 33,
+        "fields": {
+            "name": "Science Education",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 34,
+        "fields": {
+            "name": "Social Science",
+            "faculty_id": 7
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 35,
+        "fields": {
+            "name": "Agricultural and Bioresources Engineering",
+            "faculty_id": 8
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 36,
+        "fields": {
+            "name": "Civil Engineering",
+            "faculty_id": 8
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 37,
+        "fields": {
+            "name": "Electrical Engineering",
+            "faculty_id": 8
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 38,
+        "fields": {
+            "name": "Electronic Engineering",
+            "faculty_id": 8
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 39,
+        "fields": {
+            "name": "Mechanical Engineering",
+            "faculty_id": 8
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 40,
+        "fields": {
+            "name": "Metallurgical and Materials Engineering",
+            "faculty_id": 8
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 41,
+        "fields": {
+            "name": "Estate Management",
+            "faculty_id": 9
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 42,
+        "fields": {
+            "name": "Architecture",
+            "faculty_id": 9
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 43,
+        "fields": {
+            "name": "Urban and Regional Planning",
+            "faculty_id": 9
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 44,
+        "fields": {
+            "name": "Geoinfomatics and Surveying",
+            "faculty_id": 9
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 45,
+        "fields": {
+            "name": "International and Comparative Law",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 46,
+        "fields": {
+            "name": "Commercial and Corporate Law",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 47,
+        "fields": {
+            "name": "Customary and Indigenous Law",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 48,
+        "fields": {
+            "name": "Jurisprudence and Legal Theory",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 49,
+        "fields": {
+            "name": "Property Law",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 50,
+        "fields": {
+            "name": "Public Law",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 51,
+        "fields": {
+            "name": "Private Law",
+            "faculty_id": 11
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 52,
+        "fields": {
+            "name": "Anaesthesia",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 53,
+        "fields": {
+            "name": "Chemical Pathology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 54,
+        "fields": {
+            "name": "Community Medicine",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 55,
+        "fields": {
+            "name": "Dermatology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 56,
+        "fields": {
+            "name": "Haematology and Immunology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 57,
+        "fields": {
+            "name": "Medical Microbiology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 58,
+        "fields": {
+            "name": "Medicine",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 59,
+        "fields": {
+            "name": "Morbid Anatomy",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 60,
+        "fields": {
+            "name": "Obstetrics and Gynaecology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 61,
+        "fields": {
+            "name": "Ophthalmology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 62,
+        "fields": {
+            "name": "Otorhinolaryngology",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 63,
+        "fields": {
+            "name": "Paediatrics",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 64,
+        "fields": {
+            "name": "Paediatrics Surgery",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 65,
+        "fields": {
+            "name": "Pharmacology/Therapeutics",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 66,
+        "fields": {
+            "name": "Psychological Medicine",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 67,
+        "fields": {
+            "name": "Radiation Medicine",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 68,
+        "fields": {
+            "name": "Surgery",
+            "faculty_id": 12
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 69,
+        "fields": {
+            "name": "Pharmaceutical and Medicinal Chemistry",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 70,
+        "fields": {
+            "name": "Pharmacology and Toxicology",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 71,
+        "fields": {
+            "name": "Pharmaceutics",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 72,
+        "fields": {
+            "name": "Pharmaceutical Technology and Industrial Pharmacy",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 73,
+        "fields": {
+            "name": "Pharmacognosy and Environmental Medicines",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 74,
+        "fields": {
+            "name": "Clinical Pharmacy and Pharmacy Management",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 75,
+        "fields": {
+            "name": "Pharmaceutical Microbiology and Biotechnology",
+            "faculty_id": 13
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 76,
+        "fields": {
+            "name": "Computer Science",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 77,
+        "fields": {
+            "name": "Statistics",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 78,
+        "fields": {
+            "name": "Mathematics",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 79,
+        "fields": {
+            "name": "Geology",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 80,
+        "fields": {
+            "name": "Science Laboratory Technology",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 81,
+        "fields": {
+            "name": "Physics and Astronomy",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 82,
+        "fields": {
+            "name": "Pure and Industrial Chemistry",
+            "faculty_id": 14
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 83,
+        "fields": {
+            "name": "Public Administration and Local Government",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 84,
+        "fields": {
+            "name": "Economics",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 85,
+        "fields": {
+            "name": "Political Science",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 86,
+        "fields": {
+            "name": "Social Work",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 87,
+        "fields": {
+            "name": "Religion and Cultural Studies",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 88,
+        "fields": {
+            "name": "Psychology",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 89,
+        "fields": {
+            "name": "Philosophy",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 90,
+        "fields": {
+            "name": "Geography",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 91,
+        "fields": {
+            "name": "Sociology and Anthropology",
+            "faculty_id": 15
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 92,
+        "fields": {
+            "name": "Verterinary Pathology and Microbiology",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 93,
+        "fields": {
+            "name": "Verterinary Obstetrics and Reproductive Diseases",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 94,
+        "fields": {
+            "name": "Verterinary Physiology and Pharmacology",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 95,
+        "fields": {
+            "name": "Verterinary Anatomy",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 96,
+        "fields": {
+            "name": "Verterinary Medicine",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 97,
+        "fields": {
+            "name": "Verterinary Animal Health and Production",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 98,
+        "fields": {
+            "name": "Verterinary Parasitology and Entomology",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 99,
+        "fields": {
+            "name": "Verterinary Public Health and Preventive Medicine",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 100,
+        "fields": {
+            "name": "Verterinary Surgery",
+            "faculty_id": 16
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 101,
+        "fields": {
+            "name": "Agricultural Education",
+            "faculty_id": 17
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 102,
+        "fields": {
+            "name": "Business Education",
+            "faculty_id": 17
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 103,
+        "fields": {
+            "name": "Computer and Robotics Education",
+            "faculty_id": 17
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 104,
+        "fields": {
+            "name": "Home Economics and Hospitality Management Education",
+            "faculty_id": 17
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 105,
+        "fields": {
+            "name": "Industrial Technical Education",
+            "faculty_id": 17
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 106,
+        "fields": {
+            "name": "Natural Science Unit",
+            "faculty_id": 18
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 107,
+        "fields": {
+            "name": "Use of English Unit",
+            "faculty_id": 18
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 108,
+        "fields": {
+            "name": "Social Science Unit",
+            "faculty_id": 18
+        }
+    },
+    {
+        "model": "db.department",
+        "pk": 109,
+        "fields": {
+            "name": "Humanities Unit",
+            "faculty_id": 18
+        }
+    }
+]
