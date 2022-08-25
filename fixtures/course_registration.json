@@ -1,0 +1,12 @@
+[
+        {
+        "model": "db.courseregistration",
+        "pk": 1,
+        "fields": {
+            "session_id": 1,
+            "semester": 1,
+            "course_id": 1,
+            "student_id": "2020/123456" 
+        }
+    }
+]

@@ -1,0 +1,15 @@
+[
+        {
+        "model": "db.student",
+        "pk": "2020/123456",
+        "fields": {
+            "first_name": "John",
+            "last_name": "Doe",
+            "department_id": 1,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    }
+]

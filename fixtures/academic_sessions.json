@@ -1,0 +1,18 @@
+[
+    {
+        "model": "db.academicsession",
+        "pk": 1,
+        "fields": {
+            "session": "2019/2020",
+            "is_current_session": false
+        }
+    },
+    {
+        "model": "db.academicsession",
+        "pk": 2,
+        "fields": {
+            "session": "2020/2021",
+            "is_current_session": true
+        }
+    }
+]
