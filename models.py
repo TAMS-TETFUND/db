@@ -237,6 +237,10 @@ class Course(models.Model):
             ),
         ]
 
+    def __str__(self) -> str:
+        return f"{self.code}: {self.title}"
+
+
     @classmethod
     def get_courses(
         cls,
