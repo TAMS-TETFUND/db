@@ -12,5 +12,19 @@
             "is_staff": true,
             "sex": 1
         }
+    },
+    {
+        "model": "db.Staff",
+        "pk": "SS.325",
+        "fields": {
+            "first_name": "Ed",
+            "last_name": "Lorem",
+            "other_names": "Dydymus",
+            "username": "SS.325",
+            "department_id": 38,
+            "is_superuser":true,
+            "is_staff": true,
+            "sex": 1
+        }
     }
 ]

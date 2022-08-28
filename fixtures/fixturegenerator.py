@@ -3,6 +3,11 @@ import json
 
 
 def generate_department_json():
+    """
+    Converts csv files with department data to json that can be installed 
+    as fixtures in the server db. The csv must be in the format provided at 
+    the api/v1/admin/upload-format url path on the server.
+    """
     deparments = []
     with open('db/fixtures/unn/dept_uploads.csv') as data_file:
         csvreader = csv.reader(data_file)
@@ -23,6 +28,11 @@ def generate_department_json():
         output_file.write(serialized_dept)
 
 def generate_faculty_json():
+    """
+    Converts csv files with faculty data to json that can be installed 
+    as fixtures in the server db. The csv must be in the format provided at 
+    the api/v1/admin/upload-format url path on the server.
+    """
     faculties = []
     with open('db/fixtures/unn/faculties.csv') as data_file:
         csvreader = csv.reader(data_file)
@@ -44,6 +54,11 @@ def generate_faculty_json():
             output_file.write(serialized_faculties)
 
 def generate_course_json():
+    """
+    Converts csv files with course data to json that can be installed 
+    as fixtures in the server db. The csv must be in the format provided at 
+    the api/v1/admin/upload-format url path on the server.
+    """
     courses = []
     with open('db/fixtures/unn/courses_upload.csv') as data_file:
         csvreader = csv.reader(data_file)
@@ -70,3 +85,63 @@ def generate_course_json():
 
         with open("db/fixtures/unn/courses.json", "w") as output_file:
             output_file.write(serialized_courses)
+
+def generate_dummy_attendance(staff_number='SS.325', attendance_sessions=20):
+    """
+    generate some attendance data for test purposes.
+    currently works only after dummy data provided in 
+    db/fixtures have been installed.
+    """
+    from django.utils import timezone
+    from db.models import AttendanceRecord, AttendanceSession, Course, Student
+    from datetime import timedelta
+
+    course = Course.objects.filter(title='Physical Electronics').first()
+    students = Student.objects.values_list("reg_number", flat=True)
+
+    for count in range(attendance_sessions):
+        att_session = AttendanceSession.objects.create(
+            node_device_id=1,
+            initiator_id=staff_number,
+            course=course,
+            session_id=1,
+            event_type=(2 if count % 4 == 0 else 1), 
+            duration=timedelta(hours=1),
+            start_time=timezone.now()+timedelta(days=count)
+        )
+        
+        for idx, student_reg_num in enumerate(students, 1):
+            if idx % 5 == 1:
+                AttendanceRecord.objects.create(
+                    attendance_session=att_session,
+                    student_id=student_reg_num
+                )
+            elif idx % 5 == 2:
+                if count % 4 == 0:
+                    AttendanceRecord.objects.create(
+                        attendance_session=att_session,
+                        student_id=student_reg_num
+                    )
+                else:
+                    AttendanceRecord.objects.create(
+                        attendance_session=att_session,
+                        student_id=student_reg_num
+                    )
+            elif idx % 5 == 3:
+                if count % 2 == 0:
+                    AttendanceRecord.objects.create(
+                        attendance_session=att_session,
+                        student_id=student_reg_num
+                    )
+            else:
+                if count % 3 == 1:
+                    AttendanceRecord.objects.create(
+                        attendance_session=att_session,
+                        student_id=student_reg_num
+                    )
+                else:
+                    AttendanceRecord.objects.create(
+                        attendance_session=att_session,
+                        student_id=student_reg_num
+                    )
+    print("Done!!!")

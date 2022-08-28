@@ -1,15 +1,249 @@
 [
-        {
+    {
         "model": "db.student",
         "pk": "2020/123456",
         "fields": {
             "first_name": "John",
             "last_name": "Doe",
-            "department_id": 1,
+            "department_id": 38,
             "possible_grad_yr": "2025",
             "admission_status": 1,
             "level_of_study": 2,
             "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123457",
+        "fields": {
+            "first_name": "Jane",
+            "last_name": "Ray",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123458",
+        "fields": {
+            "first_name": "Peter",
+            "last_name": "Me",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123459",
+        "fields": {
+            "first_name": "Paula",
+            "last_name": "Fa",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123460",
+        "fields": {
+            "first_name": "Stewart",
+            "last_name": "So",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123461",
+        "fields": {
+            "first_name": "Ebere",
+            "last_name": "Danfulani",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123462",
+        "fields": {
+            "first_name": "Chukwudi",
+            "last_name": "Obi",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123463",
+        "fields": {
+            "first_name": "Tobias",
+            "last_name": "Nwigwe",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123464",
+        "fields": {
+            "first_name": "Oguasoanya",
+            "last_name": "Nnamdi",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123466",
+        "fields": {
+            "first_name": "Evelyn",
+            "last_name": "Okeke",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123467",
+        "fields": {
+            "first_name": "Jerome",
+            "last_name": "Ndukwe",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123468",
+        "fields": {
+            "first_name": "Adedeji",
+            "last_name": "Eze",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123469",
+        "fields": {
+            "first_name": "Clos",
+            "last_name": "Waters",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123470",
+        "fields": {
+            "first_name": "Stephen",
+            "last_name": "Wesley",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123471",
+        "fields": {
+            "first_name": "Ikoli",
+            "last_name": "Harcourt",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123472",
+        "fields": {
+            "first_name": "Stewart",
+            "last_name": "So",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123473",
+        "fields": {
+            "first_name": "Nwobodo",
+            "last_name": "Jibril",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123474",
+        "fields": {
+            "first_name": "Nzeruwa",
+            "last_name": "Comack",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 1
+        }
+    },
+    {
+        "model": "db.student",
+        "pk": "2020/123475",
+        "fields": {
+            "first_name": "Ngozi",
+            "last_name": "Forester",
+            "department_id": 38,
+            "possible_grad_yr": "2025",
+            "admission_status": 1,
+            "level_of_study": 2,
+            "sex": 2
         }
     }
 ]
