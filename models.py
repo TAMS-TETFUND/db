@@ -240,7 +240,6 @@ class Course(models.Model):
     def __str__(self) -> str:
         return f"{self.code}: {self.title}"
 
-
     @classmethod
     def get_courses(
         cls,
@@ -378,9 +377,9 @@ class AttendanceSession(models.Model):
         if not self.id:
 
             self.id = (
-                    str(self.node_device_id)
-                    + str(timezone.now())
-                    + str(self.duration)
+                str(self.node_device_id)
+                + str(timezone.now())
+                + str(self.duration)
             )
             self.id = hashlib.md5(self.id.encode()).hexdigest()
             print("proposed id", self.id)
